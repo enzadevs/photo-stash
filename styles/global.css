@@ -1,0 +1,61 @@
+:root{
+    --border-medium: 1px solid rgba(0,0,0, 1);
+    --border-thin: 1px solid rgba(0,0,0, 0.3);
+    --border-ultra-thin: 1px solid rgba(0,0,0, 0.1);
+    --border-radius-small: 7px;
+    --border-radius-medium: 14px;
+    --border-radius-large: 28px;
+    --border-radius-circle: 50%;
+    --box-shadow-full: rgba(91, 109, 104, 0.247) 0px 0px 10px 0px;
+    --box-shadow-bottom: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.margin-auto-1440{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+@font-face {
+    font-family: sspro;
+    src: url(../public/fonts/sspro_regular.ttf);
+}
+
+input{
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.next-link{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.transition{
+    transition: all ease-in .3s;
+}
+
+.transition-fast{
+    transition: all ease-in .1s;
+}
+
+.centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,36 @@
+nav{
+    position: sticky;
+    top: 0;
+}
+
+#index-navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 4em;
+}
+
+.index-nav-bar-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    height: 40px;
+    width: 10em;
+}
+
+.signup-wrapper, .theme-switch-wrapper{
+    cursor: pointer;
+    border: var(--border-ultra-thin);
+    height: 100%;
+    width: 5em;
+}
+
+.theme-switch-wrapper{
+    width: 3em;
+}
+
+.signup-wrapper:hover, .theme-switch-wrapper:hover{
+    background-color: var(--highlight-color);
+}

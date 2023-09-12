@@ -1,0 +1,8 @@
+/* .index-page-container{
+    
+} */
+
+.index-navbar-wrapper{
+    display: block;
+    border-bottom: var(--border-thin);
+}

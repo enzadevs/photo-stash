@@ -1,14 +1,8 @@
 import 'styles/layouts/navbar.css'
 
-
-
 import Link from 'next/link'
 import SignUp from 'components/Functions/SignUp'
 import ThemeSwitcher from 'components/Functions/ThemeSwitch'
-
-
-
-
 
 export default function IndexNavBar(){
     return (

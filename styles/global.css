@@ -42,6 +42,11 @@ body{
     max-width: 1440px;
 }
 
+.hw100{
+    height: 100%;
+    width: 100%;
+}
+
 @font-face {
     font-family: sspro;
     src: url(../public/fonts/sspro_regular.ttf);
@@ -90,8 +95,10 @@ button{
 .company-header-link{
     border: var(--border-ultra-thin);
     border-radius: var(--border-radius-small);
+    margin: 0 1em;
     padding: 0.25em;
 }
+
 .stash-txt{
     color: white;
     background-color: var(--highlight-darker-color);

@@ -1,8 +1,20 @@
-/* .index-page-container{
-    
-} */
+.index-page-container{
+    height: 100%;
+}
 
-.index-navbar-wrapper{
-    display: block;
-    border-bottom: var(--border-thin);
+.index-top-container{
+    border-bottom: var(--border-ultra-thin);
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    height: 500px;
+}
+
+.index-searchbox-container{
+    flex-grow: 1;
+}
+
+.index-curated-images{
+    background-color: var(--yellow-color);
+    height: auto;
 }

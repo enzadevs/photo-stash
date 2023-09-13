@@ -1,0 +1,30 @@
+.searchbox-wrapper{
+    border-radius: var(--border-radius-small);
+    position: relative;
+    height: 36px;
+    width: 30em;
+}
+
+.search-input-field{
+    border: var(--border-thin);
+    border-radius: var(--border-radius-small);
+    padding: .5em 2em .5em 0.75em;
+}
+
+.search-icon-wrapper{
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 2em;
+}
+
+.search-input-field:focus{
+    border-color: var(--highlight-color);
+}
+
+.search-icon-wrapper:hover{
+    color: var(--highlight-darker-color);
+}

@@ -13,8 +13,3 @@
 .index-searchbox-container{
     flex-grow: 1;
 }
-
-.index-curated-images{
-    background-color: var(--yellow-color);
-    height: auto;
-}

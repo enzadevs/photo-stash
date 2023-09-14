@@ -2,7 +2,7 @@
 
 import { useEffect,useState } from "react"
 import { getCuratedPhotos } from "modules/pexels_config"
-import CustomImageComponent from "./CustomImageComponent"
+import CustomImage from "./CustomImage"
 
 export default function IndexCuratedPhotos(){
     const [ curatedPhotos,setCuratedPhotos ] = useState([])
@@ -17,13 +17,9 @@ export default function IndexCuratedPhotos(){
     }, [])
 
     return (
-        <div className='index-curated-images margin-auto-1440'>
+        <div className='index-curated-images-container margin-auto-1440'>
             IndexCuratedPhotos
-            {curatedPhotos?.map(item=>{
-                return(
-                    <p>{item.id}</p>
-                )
-            })}
+            
             {console.log(curatedPhotos)}
         </div>
     )

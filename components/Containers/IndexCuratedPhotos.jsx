@@ -4,7 +4,6 @@ import { useEffect,useState } from "react"
 import { getCuratedPhotos } from 'modules/pexels_config'
 import Link from 'next/link'
 import ImageContainer from './ImageContainer'
-import CustomImage from './CustomImage'
 
 export default function IndexCuratedPhotos(){
     const [ curatedPhotos,setCuratedPhotos ] = useState([])

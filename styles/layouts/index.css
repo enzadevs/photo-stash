@@ -1,5 +1,6 @@
 .index-page-container{
-    height: 100%;
+    position: relative;
+    height: auto;
 }
 
 .index-top-container{
@@ -12,4 +13,28 @@
 
 .index-searchbox-container{
     flex-grow: 1;
+}
+
+.index-curated-images-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(460px, 1fr));
+    gap: 1em;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.index-curated-image-links{
+    filter: brightness(75%);
+}
+
+.curated-image-itself{
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.index-curated-image-links:hover{
+    filter: brightness(100%);
+    transform: scale(1.01);
 }

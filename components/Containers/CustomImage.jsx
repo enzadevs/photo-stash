@@ -12,9 +12,10 @@ export default function CustomImage({src,alt,className,quality,...rest}){
 
     return (
         <Image
-            src={src}
+            src={imgSource}
             alt={alt}
-            quality={85}
+            quality={quality}
+            className={className}
             sizes='(max-width: 720px) 100vw, (max-width: 1440px) 50vw, 33vw'
             fill
         ></Image>

@@ -1,7 +1,8 @@
 import 'styles/layouts/index.css'
 
-import Link from 'next/link'
 import { Suspense } from 'react'
+import Image from 'next/image'
+import IndexBGImage from 'public/images/blue_mountains.jpg'
 import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
@@ -12,6 +13,11 @@ export default function HomePage(){
     return (
         <div className='index-page-container'>
             <span className='index-top-container'>
+                <Image
+                    src={IndexBGImage}
+                    fill
+                    className='index-top-bg-image'
+                />
                 <IndexNavBar/>
                 <div className='index-searchbox-container centre'>
                     <SearchBox/>

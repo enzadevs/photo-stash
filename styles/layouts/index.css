@@ -11,6 +11,11 @@
     height: 500px;
 }
 
+.index-top-bg-image{
+    object-fit: cover;
+    z-index: -1;
+}
+
 .index-searchbox-container{
     flex-grow: 1;
 }
@@ -27,10 +32,6 @@
     padding-bottom: 1em;
     width: 100%;
 }
-/* 
-.index-curated-image-links{
-    
-} */
 
 .curated-image-itself{
     object-fit: cover;
@@ -40,7 +41,7 @@
 }
 
 .index-curated-image-links:hover{
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
 }
 
 .index-loading-container{
@@ -75,4 +76,8 @@
     border: var(--border-ultra-thin);
     height: 700px;
     width: 500px;
+}
+
+.index-curated-link-div:hover{
+    border: var(--border-thin);
 }

@@ -13,14 +13,14 @@ export const getSearchQueryPhotos = async(inputTextValue,currentPage)=>{
 }
 
 export const getCuratedPhotos = async () => {
-    const res = await fetch(`https://api.pexels.com/v1/curated?page=1&per_page=18`,
+    const res = await fetch(`https://api.pexels.com/v1/curated?page=1&per_page=17`,
       {
         headers: {
           Authorization: API_KEY,
         },
       }
     )
-    await new Promise((resolve) => setTimeout(resolve, 1250))
+    // await new Promise((resolve) => setTimeout(resolve, 2500))
     const responseJson = await res.json()
     return responseJson.photos
 }

@@ -8,7 +8,7 @@
     --border-radius-circle: 50%;
     --box-shadow-full: rgba(91, 109, 104, 0.247) 0px 0px 10px 0px;
     --box-shadow-bottom: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    --lightest-grey-color: rgba(125,125,125, 0.1)
+    --lightest-grey-color: rgba(125,125,125, 0.3)
 }
 
 *{

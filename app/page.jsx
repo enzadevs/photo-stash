@@ -1,5 +1,6 @@
 import 'styles/layouts/index.css'
 
+import Link from 'next/link'
 import { Suspense } from 'react'
 import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
@@ -16,6 +17,7 @@ export default function HomePage(){
                     <SearchBox/>
                 </div>
             </span>
+            <p className='margin-auto-1440 curated-txt'>Curated photos of day</p>
             <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedPhotos/>
             </Suspense>

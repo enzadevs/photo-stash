@@ -21,6 +21,9 @@ export default async function IndexCuratedPhotos(){
                     </Link>
                 )
             })}
+            <Link href='/' className='index-curated-link-div next-link transition-fast radius-small'>
+                More curated photos
+            </Link>
         </div>
     )
 }

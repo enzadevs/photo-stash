@@ -1,30 +1,18 @@
-'use client'
-
-import { useEffect,useState } from "react"
-import { getCuratedPhotos } from 'modules/pexels_config'
 import Link from 'next/link'
+import { getCuratedPhotos } from 'modules/pexels_config'
 import ImageContainer from './ImageContainer'
 
-export default function IndexCuratedPhotos(){
-    const [ curatedPhotos,setCuratedPhotos ] = useState([])
-
-    const fetchCuratedImages = async()=>{
-        let res = await getCuratedPhotos()
-        setCuratedPhotos(res)
-    }
-
-    useEffect(()=>{
-        fetchCuratedImages()
-    }, [])
+export default async function IndexCuratedPhotos(){
+    let res = await getCuratedPhotos()
 
     return (
         <div className='index-curated-images-container margin-auto-1440'>
-            {curatedPhotos?.map(image=>{
+            {res?.map(image=>{
                 return(
-                    <Link href='/' className='next-link index-curated-image-links transition-fast'>
+                    <Link href='/' className='next-link transition-fast index-curated-image-links '>
                         <ImageContainer>
                             <img
-                                className='curated-image-itself radius-small'
+                                className='curated-image-itself radius-small transition-fast '
                                 src={image.src.original + `?auto=compress&h=700&w500`}
                                 alt={image.alt}
                                 loading="lazy"

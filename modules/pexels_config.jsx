@@ -20,6 +20,7 @@ export const getCuratedPhotos = async () => {
         },
       }
     )
+    await new Promise((resolve) => setTimeout(resolve, 1250))
     const responseJson = await res.json()
     return responseJson.photos
 }

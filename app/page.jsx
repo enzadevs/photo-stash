@@ -1,9 +1,9 @@
 import 'styles/layouts/index.css'
 
+import { Suspense } from 'react'
+import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
-import { Suspense } from 'react'
-import IndexLoadingUI from './loading'
 import IndexCuratedPhotos from 'components/Containers/IndexCuratedPhotos'
 import Footer from 'components/Navigation/Footer'
 
@@ -16,7 +16,7 @@ export default function HomePage(){
                     <SearchBox/>
                 </div>
             </span>
-            <Suspense fallback={<IndexLoadingUI/>}>
+            <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedPhotos/>
             </Suspense>
             <Footer/>

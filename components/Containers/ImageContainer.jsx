@@ -1,4 +1,3 @@
-
 import 'styles/components/image-container.css'
 import {CiHeart} from 'react-icons/ci'
 import {IoShareSocialOutline} from 'react-icons/io5'

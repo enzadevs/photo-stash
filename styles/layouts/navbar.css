@@ -12,6 +12,26 @@ nav{
     width: 100%;
 }
 
+.company-header-link{
+    border: var(--border-ultra-thin);
+    border-radius: var(--border-radius-small);
+    color: white;
+    margin: 0 1em;
+    padding: 0.25em;
+}
+
+.company-header-link:hover{
+    border: var(--border-thin);
+    border-color: white;
+}
+
+.stash-txt{
+    color: white;
+    background-color: var(--highlight-darker-color);
+    border-radius: var(--border-radius-small);
+    padding: 0 0.3em;
+}
+
 .index-nav-bar-buttons{
     display: flex;
     flex-flow: row nowrap;
@@ -23,6 +43,7 @@ nav{
 }
 
 .signup-wrapper, .theme-switch-wrapper{
+    color: white;
     cursor: pointer;
     border: var(--border-ultra-thin);
     height: 100%;
@@ -30,9 +51,10 @@ nav{
 }
 
 .theme-switch-wrapper{
-    width: 3em;
+    width: 2.75em;
 }
 
 .signup-wrapper:hover, .theme-switch-wrapper:hover{
     border: var(--border-thin);
+    border-color: white;
 }

@@ -2,7 +2,7 @@ import 'styles/layouts/index.css'
 
 import { Suspense } from 'react'
 import Image from 'next/image'
-import IndexBGImage from 'public/images/blue_mountains.jpg'
+import IndexBGImage from 'public/images/tree forest.jpg'
 import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'

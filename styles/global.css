@@ -91,22 +91,3 @@ button{
 .radius-small{
     border-radius: var(--border-radius-small);
 }
-
-/* Globals */
-.company-header-link{
-    border: var(--border-ultra-thin);
-    border-radius: var(--border-radius-small);
-    margin: 0 1em;
-    padding: 0.25em;
-}
-
-.stash-txt{
-    color: white;
-    background-color: var(--highlight-darker-color);
-    border-radius: var(--border-radius-small);
-    padding: 0 0.3em;
-}
-
-.company-header-link:hover{
-    border: var(--border-thin);
-}

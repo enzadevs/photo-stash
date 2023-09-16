@@ -12,6 +12,7 @@
 }
 
 .index-top-bg-image{
+    filter: brightness(70%);
     object-fit: cover;
     z-index: -1;
 }
@@ -40,10 +41,7 @@
     height: 100%;
 }
 
-.index-curated-image-links:hover{
-    /* transform: scale(1.01); */
-}
-
+/* !Index loading sekeleton */
 .index-loading-container{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
@@ -70,14 +68,4 @@
     100% {
       opacity: 0.1;
     }
-}
-
-.index-curated-link-div{
-    border: var(--border-ultra-thin);
-    height: 700px;
-    width: 500px;
-}
-
-.index-curated-link-div:hover{
-    border: var(--border-thin);
 }

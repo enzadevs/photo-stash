@@ -6,7 +6,7 @@ import IndexBGImage from 'public/images/colorful-trees-autumn-forest-generative-
 import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
-import IndexCuratedPhotos from 'components/Containers/Index/IndexCuratedPhotos'
+import IndexCuratedPhotos from 'components/Containers/index/IndexCuratedPhotos'
 import Footer from 'components/Navigation/Footer'
 
 export default function HomePage(){

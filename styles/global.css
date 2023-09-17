@@ -84,10 +84,16 @@ button{
 }
 
 .icons{
+    display: block;
     height: 18px;
     width: 18px;
 }
 
 .radius-small{
     border-radius: var(--border-radius-small);
+}
+
+.hw100{
+    height: 100%;
+    width: 100%;
 }

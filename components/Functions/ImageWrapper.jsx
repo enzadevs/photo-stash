@@ -13,10 +13,11 @@ export default function ImageWrapper({src,alt,photographer,photographer_url,clas
             <CustomImage
                 src={src}
                 alt={alt}
+                className='custom-image'
             />
             <span className='image-buttons-container transition-fast hw100'>
                 <span className='top-right-buttons transition-fast'>
-                    <span className='wrapper-image-icons-container radius-small centre transition-fast'>
+                    <span className='heart-icon-wrapper radius-small centre transition-fast'>
                         <FaHeart className='image-icons'/> 
                     </span>
                     <span className='wrapper-image-icons-container radius-small centre transition-fast'>

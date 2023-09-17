@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ErrorImage from 'public/images/actions/error_pink.jpg'
 import { useState,useEffect } from 'react'
 
-export default function CustomImage({src,alt,quality=100}){
+export default function CustomImage({src,alt,quality=100,className}){
     const [ imgSource,setImgSource ] = useState(src)
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ export default function CustomImage({src,alt,quality=100}){
 
     return (
         <Image
-            className='custom-image'
+            className={className}
             src={imgSource}
             alt={alt}
             quality={quality}

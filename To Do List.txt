@@ -1,2 +1,8 @@
 npm install --save-dev babel-plugin-styled-components
 npm install @plaiceholder/next
+
+
+
+
+Fixes:
+    -replace index page collage picture to image which has much smaller images inside

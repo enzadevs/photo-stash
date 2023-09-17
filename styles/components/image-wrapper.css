@@ -1,13 +1,8 @@
 .image-container{
+    cursor: pointer;
     position: relative;
     height: 100%;
     width: 100%;
-}
-
-.custom-image{
-    border-radius: var(--border-radius-small);
-    position: relative;
-    object-fit: cover;
 }
 
 .image-buttons-container{
@@ -32,7 +27,7 @@
     z-index: 1;
 }
 
-.wrapper-image-icons-container, .external-link-icon{
+.wrapper-image-icons-container, .external-link-icon, .heart-icon-wrapper{
     cursor: pointer;
     background-color: white;
     height: 2.5em;
@@ -41,6 +36,10 @@
 
 .wrapper-image-icons-container:hover, .external-link-icon:hover{
     color: var(--highlight-color);
+}
+
+.heart-icon-wrapper:hover{
+    color: var(--red-color);
 }
 
 .bottom-options-span{

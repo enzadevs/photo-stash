@@ -1,0 +1,16 @@
+Index Page at Slow 3G Speed:
+	-Finish : 1.3min
+	-DOMLoaded: 8.51s
+	-Load: 1.0 min
+
+
+		At Fast 3G Speed:
+			-Finish: 16.46s
+			-DOMLoaded: 2.69s
+			-Load: 16.46s
+
+
+				No throttling:
+					-Finish: 9.05s
+					-DOMLoaded: 2.62s
+					-Load: 2.68s

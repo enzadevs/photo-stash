@@ -47,9 +47,11 @@
 }
 
 .curated-txt{
-    margin: 1.5em auto;
+    font-size: 1.5em;
+    margin: 0.75em auto;
     max-width: 1440px;
 }
+
 .index-curated-images-container{
     display: grid;
     gap: 1em;
@@ -65,12 +67,21 @@
     width: 100%;
 }
 
+.custom-image{
+    border-radius: var(--border-radius-small);
+    position: relative;
+    object-fit: cover;
+}
+
 .more-curated-link{
     border: var(--border-ultra-thin);
-    font-size: 1.25em;
+    color: white;
+    font-size: 1.1em;
     position: relative;
 }
 
-.more-curated-link:hover{
-    border: var(--border-thin);
+.more-curated-img{
+    border-radius: var(--border-radius-small);
+    filter: brightness(50%);
+    z-index: -2;
 }

@@ -1,5 +1,7 @@
 import { getCuratedPhotos } from 'modules/pexels_config'
 import ImageWrapper from 'components/Functions/ImageWrapper'
+import Collage from 'public/images/randomcollage.jpg'
+import CustomImage from '../CustomImage'
 import Link from 'next/link'
 
 export default async function IndexCuratedPhotos(){
@@ -21,6 +23,11 @@ export default async function IndexCuratedPhotos(){
             })}
             <Link href='/' className='more-curated-link next-link centre radius-small hw100 transition-fast'>
                 More curated photos
+                <CustomImage
+                    src={Collage}
+                    alt='collage'
+                    className='more-curated-img'
+                />
             </Link>
         </div>
     )

@@ -2,7 +2,7 @@ import 'styles/layouts/index.css'
 
 import { Suspense } from 'react'
 import Image from 'next/image'
-import IndexBGImage from 'public/images/colorful-trees-autumn-forest-generative-al.jpg'
+import IndexBGImage from 'public/images/beautiful-scenery-pathway-forest-with-trees-covered-with-frost.jpg'
 import IndexLoading from './loading'
 import IndexNavBar from 'components/Navigation/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
@@ -24,7 +24,7 @@ export default function HomePage(){
                     <SearchBox/>
                 </div>
             </span>
-            <p className='margin-auto-1440 curated-txt'>Curated photos of day</p>
+            <p className='curated-txt'>Curated photos of day</p>
             <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedPhotos/>
             </Suspense>

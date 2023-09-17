@@ -6,7 +6,7 @@
 }
 
 .search-input-field{
-    border: var(--border-thin);
+    border: var(--border-ultra-thin);
     border-radius: var(--border-radius-small);
     padding: .5em 2em .5em 0.75em;
 }
@@ -22,9 +22,10 @@
 }
 
 .search-input-field:focus{
+    border: var(--border-medium);
     border-color: var(--highlight-color);
 }
 
 .search-icon-wrapper:hover{
-    color: var(--highlight-darker-color);
+    color: var(--highlight-color);
 }

@@ -1,5 +1,6 @@
 import { getCuratedPhotos } from 'modules/pexels_config'
 import ImageWrapper from 'components/Functions/ImageWrapper'
+import Link from 'next/link'
 
 export default async function IndexCuratedPhotos(){
     let res = await getCuratedPhotos()
@@ -18,6 +19,9 @@ export default async function IndexCuratedPhotos(){
                     </span>
                 )
             })}
+            <Link href='/' className='more-curated-link next-link centre radius-small hw100 transition-fast'>
+                More curated photos
+            </Link>
         </div>
     )
 }

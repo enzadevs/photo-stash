@@ -5,4 +5,6 @@ npm install @plaiceholder/next
 
 
 Fixes:
-    -replace index page collage picture to image which has much smaller images inside
+    Index Page:
+        -replace index page collage picture to image which has much smaller images inside
+        -add scroll to top button

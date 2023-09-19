@@ -1,15 +1,13 @@
 import 'styles/components/image-wrapper.css'
 import CustomImage from 'components/Containers/CustomImage'
-import Link from 'next/link'
 import {FaHeart} from 'react-icons/fa'
 import {FiLink} from 'react-icons/fi'
 import {FaUser} from 'react-icons/fa'
 import {GoDownload} from 'react-icons/go'
 
-export default function ImageWrapper({src,alt,photographer,photographer_url,className}){
-
+export default function ImageWrapper({src,alt,photographer,photographer_url,className,id}){
     return (
-        <div className='image-container transition-fast radius-small'>
+        <div className='image-container transition-fast radius-small' id={id}>
             <CustomImage
                 src={src}
                 alt={alt}
@@ -29,9 +27,9 @@ export default function ImageWrapper({src,alt,photographer,photographer_url,clas
                         <FaUser className='image-icons'/>
                     </span>
                     <p className='photographer-txt'>{photographer}</p>
-                    <Link href='/' className='external-link-icon next-link radius-small centre transition-fast'>
+                    <span className='download-button-wrapper next-link radius-small centre transition-fast'>
                         <GoDownload className='image-icons'/>
-                    </Link>
+                    </span>
                 </span>
             </span>
         </div>

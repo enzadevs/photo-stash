@@ -1,10 +1,12 @@
 import 'styles/layouts/index.css'
 
+import { useContext } from 'react'
+import SearchResultsProvider from 'contexts/SearchContext'
 import { Suspense } from 'react'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-scenery-pathway-forest-with-trees-covered-with-frost.jpg'
 import IndexLoading from './loading'
-import IndexNavBar from 'components/Navigation/IndexNavBar'
+import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
 import IndexCuratedPhotos from 'components/Containers/index/IndexCuratedPhotos'
 import Footer from 'components/Navigation/Footer'
@@ -20,9 +22,11 @@ export default function HomePage(){
                     quality={100}
                 />
                 <IndexNavBar/>
-                <div className='index-searchbox-container centre'>
-                    <SearchBox/>
-                </div>
+                <SearchResultsProvider>
+                    <div className='index-searchbox-container centre'>
+                        <SearchBox/>
+                    </div>
+                </SearchResultsProvider>
             </span>
             <p className='curated-txt'>Curated photos of day</p>
             <Suspense fallback={<IndexLoading/>}>

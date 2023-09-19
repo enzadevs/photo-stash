@@ -1,0 +1,19 @@
+#global-navbar-wrapper{
+    background-color: var(--primary-bg-color);
+    border-bottom: var(--border-ultra-thin);
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+.results-wrapper{
+    background-color: var(--lightest-violet-color);
+}
+
+.result-image-wrapper{
+    border-radius: var(--border-radius-small);
+    display: block;
+    position: relative;
+    height: 700px;
+    width: 100%;
+}

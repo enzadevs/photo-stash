@@ -27,14 +27,16 @@
     z-index: 1;
 }
 
-.wrapper-image-icons-container, .external-link-icon, .heart-icon-wrapper{
-    cursor: pointer;
+.wrapper-image-icons-container, .download-button-wrapper, .heart-icon-wrapper{
+    border: var(--border-ultra-thin);
     background-color: white;
+    color: var(--main-text-color);
+    cursor: pointer;
     height: 2.5em;
     width: 2.5em;
 }
 
-.wrapper-image-icons-container:hover, .external-link-icon:hover{
+.wrapper-image-icons-container:hover, .download-button-wrapper:hover{
     color: var(--highlight-color);
 }
 
@@ -67,7 +69,7 @@
     margin-left: 0.25em;
 }
 
-.external-link-icon{
+.download-button-wrapper{
     margin-left: auto;
 }
 
@@ -75,4 +77,13 @@
     display: block;
     height: 20px;
     width: 20px;
-}   
+}
+
+#global-image-container{
+    height: 700px;
+    width: 450px;
+}
+
+.custom-image{
+    object-fit: cover;
+}

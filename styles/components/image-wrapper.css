@@ -28,8 +28,8 @@
 }
 
 .wrapper-image-icons-container, .download-button-wrapper, .heart-icon-wrapper{
-    border: var(--border-ultra-thin);
     background-color: white;
+    border: var(--border-ultra-thin);
     color: var(--main-text-color);
     cursor: pointer;
     height: 2.5em;

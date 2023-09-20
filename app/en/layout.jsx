@@ -1,4 +1,3 @@
-import 'styles/layouts/en_layout.css'
 import { useContext } from 'react'
 import SearchResultsProvider from 'contexts/SearchContext'
 import GlobalNavBar from "components/Containers/en/GlobalNavBar"

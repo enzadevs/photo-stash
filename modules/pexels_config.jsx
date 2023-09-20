@@ -20,7 +20,20 @@ export const getCuratedPhotos = async () => {
         },
       }
     )
-    await new Promise((resolve) => setTimeout(resolve, 2500))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     const responseJson = await res.json()
     return responseJson.photos
 }
+
+// export const getCuratedPhotos = async(page,per_page) => {
+//   const res = await fetch(`https://api.pexels.com/v1/curated?page=${page}&per_page=${per_page}`,
+//     {
+//       headers: {
+//         Authorization: API_KEY,
+//       },
+//     }
+//   )
+//   await new Promise((resolve) => setTimeout(resolve, 1000))
+//   const responseJson = await res.json()
+//   return responseJson.photos
+// }

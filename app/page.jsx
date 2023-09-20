@@ -1,6 +1,5 @@
 import 'styles/layouts/index.css'
 
-import { useContext } from 'react'
 import SearchResultsProvider from 'contexts/SearchContext'
 import { Suspense } from 'react'
 import Image from 'next/image'

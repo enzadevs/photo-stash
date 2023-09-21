@@ -7,7 +7,7 @@ export default async function IndexCuratedImages(){
     const curatedPhotos = await getCuratedPhotos()
 
     return (
-        <div className='index-curated-images-container'>
+        <div className='index-curated-images-container margin-auto-1440'>
             
         </div>
     )

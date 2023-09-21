@@ -22,25 +22,3 @@
 .curated-txt{
     font-size: 1.25em;
 }
-
-.index-curated-images-container{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1em;
-}
-
-.column{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1em; 
-}
-
-.curated-photo-wrapper{
-    height: 100%;
-    width: 100%;
-}
-
-.index-curated-photo-itself{
-    border-radius: var(--border-radius-small);
-    object-fit: cover;
-}

@@ -1,14 +1,11 @@
-import 'styles/components/image-wrapper.css'
-import CustomImage from './CustomImage'
+'use client'
 
-export default function ImageWrapper({img_src,alt_txt,img_classname,photographer}){
+import 'styles/components/image-wrapper.css'
+
+export default function ImageWrapper({}){
     return (
-        <div className='image-wrapper-div'>
-            <CustomImage
-                src={img_src}
-                alt={alt_txt}
-                className={img_classname}
-            />
+        <div className='photo-wrapper'>
+            
         </div>
     )
 }

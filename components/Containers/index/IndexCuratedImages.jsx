@@ -8,7 +8,16 @@ export default async function IndexCuratedImages(){
 
     return (
         <div className='index-curated-images-container margin-auto-1440'>
-            
+            {curatedPhotos?.map(item=>{
+                return(
+                    <ImageWrapper
+                        src={item.src.large2x}
+                        alt={item.alt}
+                        photographer={item.photographer}
+                        photostash_url={undefined}
+                    />
+                )
+            })}
         </div>
     )
 }

@@ -3,7 +3,7 @@
 }
 
 .index-top-container{
-    background-color: var(--red-color);
+    background-color: #1A3A3A;
     display: flex;
     flex-flow: column nowrap;
     position: relative;
@@ -16,4 +16,8 @@
 
 .curated-txt{
     font-size: 1.25em;
+}
+
+.index-curated-images-container{
+    background-color: var(--lightest-violet-color);
 }

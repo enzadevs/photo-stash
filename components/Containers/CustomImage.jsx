@@ -16,7 +16,9 @@ export default function CustomImage({src,alt,photographer,photostash_url}){
             className='custom-image-component'
             alt={alt}
             src={imgSource}
-            fill
+            width={0}
+            height={0}
+            style={{ width: '100%', height: 'auto' }}
             onLoadingComplete={(result) => {
                 if (result.naturalWidth === 0) {
                     setImgSource(ErrorImage)

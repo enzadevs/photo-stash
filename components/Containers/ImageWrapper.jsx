@@ -5,7 +5,7 @@ import CustomImage from './CustomImage'
 
 export default function ImageWrapper({src,alt,photographer,photostash_url}){
     return (
-        <div className='photo-wrapper hw100'>
+        <div className='photo-wrapper'>
             <CustomImage
                 src={src}
                 alt={alt}

@@ -3,16 +3,11 @@
 }
 
 .index-top-container{
+    background-color: var(--red-color);
     display: flex;
     flex-flow: column nowrap;
     position: relative;
     height: 500px;
-}
-
-.index-top-bg-image{
-    filter: brightness(85%);
-    object-fit: cover;
-    z-index: -1;
 }
 
 .index-searchbox-container{
@@ -22,7 +17,3 @@
 .curated-txt{
     font-size: 1.25em;
 }
-
-/* .index-curated-images-container{
-    
-} */

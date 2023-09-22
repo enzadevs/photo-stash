@@ -1,8 +1,6 @@
 import 'styles/layouts/index.css'
 
 import SearchResultsProvider from 'contexts/SearchContext'
-import Image from 'next/image'
-import IndexBGImage from 'public/images/beautiful-scenery-pathway-forest-with-trees-covered-with-frost.jpg'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
@@ -12,12 +10,6 @@ export default function HomePage(){
     return (
         <div className='index-page-container'>
             <span className='index-top-container'>
-                <Image
-                    src={IndexBGImage}
-                    fill
-                    className='index-top-bg-image'
-                    quality={100}
-                />
                 <IndexNavBar/>
                 <SearchResultsProvider>
                     <div className='index-searchbox-container centre'>

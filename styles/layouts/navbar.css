@@ -3,11 +3,13 @@ nav{
     top: 0;
 }
 
-#index-navbar, #global-navbar{
+#index-navbar{
+    border-bottom: 1px solid rgba(256,256,256, 0.3);
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     position: relative;
+    padding: 0 1em;
     height: 4em;
     width: 100%;
 }
@@ -15,7 +17,6 @@ nav{
 .company-header-link{
     border: 1px solid rgba(256,256,256, 0.3);
     color: white;
-    margin: 0 1em;
     padding: 0.25em;
 }
 
@@ -31,55 +32,16 @@ nav{
     padding: 0 0.3em;
 }
 
-.index-nav-bar-buttons,.global-nav-bar-buttons{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+.signup-link{
+    border: 1px solid rgba(256,256,256, 0.3);
+    color: white;
     margin-left: auto;
     height: 38px;
-    width: 10em;
-}
-
-.signup-wrapper, .theme-switch-wrapper,.global-signup-wrapper,.global-theme-switch-wrapper{
-    background-color: rgba(10,100,100, 0.1);
-    border: 1px solid rgba(256,256,256, 0.5);
-    color: white;
-    cursor: pointer;
-    height: 100%;
     width: 5em;
+
 }
 
-.theme-switch-wrapper{
-    width: 2.75em;
-}
-
-.signup-wrapper:hover, .theme-switch-wrapper:hover{
+.signup-link:hover{
     border: var(--border-thin);
     border-color: white;
-}
-
-.global-company-header{
-    border: var(--border-ultra-thin);
-    margin: 0 1em;
-    padding: 0.25em;
-}
-
-.global-signup-wrapper,.global-theme-switch-wrapper{
-    background-color: var(--primary-bg-color);
-    border: var(--border-ultra-thin);
-    color: black;
-}
-
-.global-theme-switch-wrapper{
-    width: 2.75em;
-}
-
-.global-company-header:hover,.global-signup-wrapper:hover,.global-theme-switch-wrapper:hover{
-    border: var(--border-thin);
-    border-color: var(--highlight-color);
-}
-
-.global-srchbx-wrapper{
-    flex-grow: 1;
 }

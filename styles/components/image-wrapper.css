@@ -1,10 +1,84 @@
 .photo-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
     position: relative;
-    height: 100%;
-    width: 100%;
+    margin: 1.5em 0.5em;
+    height: auto;
 }
 
 .custom-image-component{
-    height: auto;
+    position: relative;
+    opacity: 1;
+    z-index: -2;
+}
+
+.image-buttons{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.image-buttons:hover{
+    opacity: 1;
+}
+
+.image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
+    background-color: white;
+    cursor: pointer;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.image-icons-wrapper:hover, .download-icon-wrapper:hover{
+    color: var(--highlight-color);
+}
+
+.heart-icon-wrapper:hover{
+    color: var(--red-color);
+}
+
+.image-icons{
+    height: 20px;
+    width: 20px;
+}
+
+.top-right-buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1em;
+    height: 7em;
+}
+
+.botttom-container{
+    background-color: rgba(50, 50, 50, 0.25);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 1em;
+    height: 4em;
     width: 100%;
+}
+
+.profile-icon-wrapper{
+    background-color: var(--highlight-color);
+    border-radius: var(--border-radius-circle);
+    color: white;
+}
+
+.photographer-name{
+    color: white;
+    margin-left: 0.5em;
+}
+
+.download-icon-wrapper{
+    margin-left: auto;
 }

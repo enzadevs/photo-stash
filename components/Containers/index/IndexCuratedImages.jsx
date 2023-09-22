@@ -8,16 +8,42 @@ export default async function IndexCuratedImages(){
 
     return (
         <div className='index-curated-images-container margin-auto-1440'>
-            {curatedPhotos?.map(item=>{
-                return(
-                    <ImageWrapper
-                        src={item.src.large2x}
-                        alt={item.alt}
-                        photographer={item.photographer}
-                        photostash_url={undefined}
-                    />
-                )
-            })}
+            <span className='column'>
+                {curatedPhotos?.slice(0,7).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
+            <span className='column'>
+                {curatedPhotos?.slice(8,14).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
+            <span className='column'>
+                {curatedPhotos?.slice(16,23).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
         </div>
     )
 }

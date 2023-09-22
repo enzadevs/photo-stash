@@ -19,5 +19,16 @@
 }
 
 .index-curated-images-container{
-    background-color: var(--lightest-violet-color);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.column{
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    width: 100%;
 }

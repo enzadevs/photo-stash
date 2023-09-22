@@ -1,0 +1,96 @@
+<Image
+  src="url"
+  width={0}
+  height={0}
+  // sizes="100vw"
+  style={{ width: '100%', height: 'auto' }} 
+/>
+
+
+       <Image
+        src={src}
+        width={200}
+        height={160}
+        alt={alt}
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+        style={{ height: '100%', width: '100%' }} //The point is right there!
+        //OR className='w-100 h-100'
+      />
+      
+
+             <Image
+            src={Logo}
+            width='100%'
+            height='100%'
+            objectFit='contain'
+            alt='Brand logo'
+          />
+
+          <div className="unset-img">
+  <Image alt="Mountains" src="/project/pexels-photo.jpeg" layout="fill" className="custom-img"
+   />
+</div>
+Here is the CSS which overrides the next.js functionality.
+.custom-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.unset-img {
+  width: 100%;
+}
+.unset-img > div {
+  position: unset !important;
+}
+
+
+const ResponsiveImage = (url) => {
+  const [meta, setMeta] = useState({ loaded: false, x: 0, y: 0 });
+  return (
+    <li className="relative flex h-full w-full items-center justify-center">
+      <Image
+        src={url}
+        width={2000}
+        height={2000}
+        quality={100}
+        sizes="100vw"
+        alt="Post Image"
+        className={`relative h-full w-full object-contain object-center`}
+        style={{
+          maxWidth: meta.loaded ? meta.x : 'none',
+          opacity: meta.loaded ? '1' : '0',
+        }}
+        onLoadingComplete={(image) => {
+          setMeta({
+            loaded: true,
+            x: image.naturalWidth,
+            y: image.naturalHeight,
+          });
+        }}
+      />
+    </li>
+  );
+};
+
+In situations where I know no image to bigger than certain dimensions (in the above example 2000px), I can use load images with width and height set to `2000` and then the `naturalWidth` and `naturalHeight` of the image should be close to the original dimensions of the image. Combined with `sizes={100vw}`, we still get a srcset for different screens and can deliver optimised images. The issue with this approach is that `naturalWidth` and `naturalHeight` can be modified by browsers and may not be correct [(reference)](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/naturalWidth). We have seen this behaviour. This implementation would also require some work for it to handle browser resize events.
+
+
+
+// 
+
+You can set layout="fill" and objectFit="contain" to your Image so that it maintains its aspect ratio while filling its container. You can then add a wrapper div around the Image component and apply the height to it instead.
+
+<div style={{ position: 'relative', height: '30px' }}>
+    <Image
+        src="/logo.png"
+        layout="fill"
+        objectFit="contain"
+    />
+</div>
+
+
+sizes="(max-width: 650px) calc((100vw - 30px - 15px) / 2), (max-width: 900px) calc((100vw - 30px - 15px) / 2), (max-width: 1440px) calc((100vw - 60px - 60px) / 3), (max-width: 1600px) calc((100vw - 160px - 60px) / 3), calc((1600pxpx - 160px - 60px) / 3)"

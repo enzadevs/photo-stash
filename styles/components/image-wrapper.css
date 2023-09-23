@@ -2,8 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     position: relative;
-    margin: 1.5em 0.5em;
-    height: auto;
+    margin: 1em 0.5em;
 }
 
 .custom-image-component{
@@ -13,14 +12,26 @@
 }
 
 .image-buttons{
-    opacity: 0;
     position: absolute;
     top: 0;
+    opacity: 0;
     z-index: 1;
 }
 
 .image-buttons:hover{
     opacity: 1;
+}
+
+.top-right-buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1em;
+    height: 7em;
 }
 
 .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
@@ -43,18 +54,6 @@
     width: 20px;
 }
 
-.top-right-buttons{
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 1em;
-    height: 7em;
-}
-
 .botttom-container{
     background-color: rgba(50, 50, 50, 0.25);
     position: absolute;
@@ -68,15 +67,15 @@
     width: 100%;
 }
 
+.photographer-name{
+    color: white;
+    margin-left: 0.5em;
+}
+
 .profile-icon-wrapper{
     background-color: var(--highlight-color);
     border-radius: var(--border-radius-circle);
     color: white;
-}
-
-.photographer-name{
-    color: white;
-    margin-left: 0.5em;
 }
 
 .download-icon-wrapper{

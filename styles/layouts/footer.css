@@ -1,8 +1,38 @@
 footer{
-    background-color: var(--highlight-color);
+    border-top: var(--border-ultra-thin);
+    background-color: var(--lightest-violet-color);
     position: relative;
     margin-top: 1em;
     bottom: 0;
-    right: 0;
     height: 175px;
+}
+
+.footer-div{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-columns{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 1em;
+    padding: 1em;
+    flex: 30%;
+    max-width: 33%;
+}
+
+.footer-links-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+}
+
+.footer-links:hover{
+    color: white;
+}
+
+.footer-icons{
+    height: 44px;
+    width: 44px;
 }

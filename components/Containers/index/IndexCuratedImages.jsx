@@ -21,7 +21,7 @@ export default async function IndexCuratedImages(){
                 })}
             </span>
             <span className='column'>
-                {curatedPhotos?.slice(8,14).map(photo=>{
+                {curatedPhotos?.slice(8,15).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}

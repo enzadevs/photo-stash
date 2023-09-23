@@ -1,0 +1,20 @@
+#en-layout{
+    background-color: var(--yellow-color);
+}
+
+.global-navbar-wrapper{
+    background-color: var(--primary-bg-color);
+    border-bottom: var(--border-ultra-thin);
+    display: block;
+}
+
+.search-results-container{
+    height: 2500px;
+}
+
+.results-wrapper{
+    border: var(--border-thin);
+    border-top: none;
+    border-bottom: none;
+    height: 100%;
+}

@@ -9,7 +9,9 @@ export default function IndexNavBar(){
             <Link className='company-header-link next-link transition-fast radius-small' href='/'>
                 <h1>Photo <span className='stash-txt'>Stash</span></h1>
             </Link>
-            <ProfileBoard/>
+            <ProfileBoard
+                styles={'signup-link next-link radius-small centre transition-fast'}
+            />
         </nav>
     )
 }

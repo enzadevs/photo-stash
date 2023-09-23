@@ -2,7 +2,6 @@
 
 import { useContext } from 'react'
 import { ResultsContext } from 'contexts/SearchContext'
-import ImageWrapper from 'components/Functions/ImageWrapper'
 
 export default function SearchResults(){
     let {resultsArray} = useContext(ResultsContext)
@@ -10,13 +9,7 @@ export default function SearchResults(){
     return (
         <div className='search-results-container'>
             <div className='results-wrapper margin-auto-1440'>
-                {resultsArray?.map(item=>{
-                    return(
-                        <span className='result-image'>
-                            
-                        </span>
-                    )
-                })}
+                Hop Hey La La Ley
             </div>
         </div>
     )

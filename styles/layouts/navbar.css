@@ -45,3 +45,34 @@ nav{
     border: var(--border-thin);
     border-color: white;
 }
+
+#global-navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+    padding: 0 1em;
+    height: 4em;
+    width: 100%;
+}
+
+.global-header-link{
+    border: var(--border-ultra-thin);
+    padding: 0.25em;
+}
+
+.global-searchbox-wrapper{
+    max-width: 30em;
+}
+
+.global-signup-link{
+    border: var(--border-ultra-thin);
+    margin-left: auto;
+    height: 38px;
+    width: 5em;
+}
+
+.global-header-link:hover ,.global-signup-link:hover{
+    border: var(--border-thin);
+    border-color: var(--highlight-color);
+}

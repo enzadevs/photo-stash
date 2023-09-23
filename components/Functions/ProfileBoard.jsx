@@ -1,11 +1,10 @@
 import Link from 'next/link'
 
-export default function ProfileBoard(){
+export default function ProfileBoard({styles}){
     return (
         <Link
             href='/en/signup'
-            className='signup-link next-link radius-small centre transition-fast'
-            id='global-signup-wrapper'
+            className={styles}
         >Sign Up</Link>
     )
 }

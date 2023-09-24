@@ -12,7 +12,7 @@ export default function HomePage(){
             <span className='index-top-container'>
                 <IndexNavBar/>
                 <SearchResultsProvider>
-                    <div className='index-searchbox-container centre'>
+                    <div className='index-searchbox-container margin-auto-1440 centre'>
                         <SearchBox/>
                     </div>
                 </SearchResultsProvider>

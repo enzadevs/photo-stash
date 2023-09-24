@@ -1,6 +1,7 @@
 import 'styles/layouts/en_layout.css'
 import SearchResultsProvider from 'contexts/SearchContext'
 import GlobalNavBar from 'components/Containers/en/GlobalNavBar'
+import Footer from 'components/Navigation/Footer'
 
 export default function EnLayout({children}){
     return (
@@ -11,6 +12,7 @@ export default function EnLayout({children}){
                 </span>
                 {children}
             </SearchResultsProvider>
+            <Footer/>
         </div>
     )
 }

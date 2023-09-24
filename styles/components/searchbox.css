@@ -9,6 +9,8 @@
     border: var(--border-ultra-thin);
     border-radius: var(--border-radius-small);
     padding: .5em 2em .5em 0.75em;
+    height: 38px;
+    width: 30em;
 }
 
 .search-icon-wrapper{

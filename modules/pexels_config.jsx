@@ -1,7 +1,7 @@
 const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
 export const getSearchQueryPhotos = async(inputTextValue,currentPage)=>{
-    const res = await fetch(`https://api.pexels.com/v1/search?query=${inputTextValue}?page=${currentPage}&per_page=24`,
+    const res = await fetch(`https://api.pexels.com/v1/search?query=${inputTextValue}?page=${currentPage}&per_page=45`,
         {
           headers: {
             Authorization: API_KEY,
@@ -20,7 +20,7 @@ export const getCuratedPhotos = async () => {
         },
       }
     )
-    await new Promise((resolve) => setTimeout(resolve, 2500))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     const responseJson = await res.json()
     return responseJson.photos
 }

@@ -18,6 +18,8 @@ nav{
     border: 1px solid rgba(256,256,256, 0.3);
     color: white;
     padding: 0.25em;
+    height: 38px;
+    width: 145px;
 }
 
 .company-header-link:hover{
@@ -58,11 +60,19 @@ nav{
 
 .global-header-link{
     border: var(--border-ultra-thin);
-    padding: 0.25em;
+    padding: 0 0.25em;
+    height: 38px;
+    width: 145px;
 }
 
 .global-searchbox-wrapper{
-    max-width: 30em;
+    flex-grow: 1;
+}
+
+.global-profileboard-wrapper{
+    margin-left: auto;
+    height: 38px;
+    width: 145px;
 }
 
 .global-signup-link{

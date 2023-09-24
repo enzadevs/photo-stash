@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .image-buttons:hover{

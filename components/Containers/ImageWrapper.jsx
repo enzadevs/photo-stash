@@ -4,7 +4,7 @@ import 'styles/components/image-wrapper.css'
 import CustomImage from './CustomImage'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
-export default function ImageWrapper({src,alt,photographer,photostash_url}){
+export default function ImageWrapper({src,alt,photographer,photostash_url=undefined}){
     return (
         <div className='photo-wrapper radius-small'>
             <CustomImage

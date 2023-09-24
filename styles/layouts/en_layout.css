@@ -1,20 +1,32 @@
 #en-layout{
-    background-color: var(--yellow-color);
+    
 }
 
 .global-navbar-wrapper{
     background-color: var(--primary-bg-color);
     border-bottom: var(--border-ultra-thin);
     display: block;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .search-results-container{
-    height: 2500px;
+    height: auto;
 }
 
 .results-wrapper{
-    border: var(--border-thin);
-    border-top: none;
-    border-bottom: none;
+    display: flex;
+    flex-flow: row nowrap;
     height: 100%;
+    width: 100%;
+}
+
+.results-column{
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    width: 100%;
 }

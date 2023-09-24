@@ -2,13 +2,13 @@
 
 import 'styles/components/searchbox.css'
 import { useContext } from 'react'
-import { InputTextValue,ResultsContext,GoToSearchPageContext } from 'contexts/SearchContext'
+import { InputTextValue,ResultsContext,GoToSearchRouteContext } from 'contexts/SearchContext'
 import { BsSearch } from 'react-icons/bs'
 
 export default function SearchBox(){
     let {inputTextValue,handleInputTextValueChange} = useContext(InputTextValue)
     let {handleFetchSearchQueryResults} = useContext(ResultsContext)
-    let {goToSearchPage} = useContext(GoToSearchPageContext)
+    let {goToSearchPage} = useContext(GoToSearchRouteContext)
 
     return (
         <span className='searchbox-wrapper'>

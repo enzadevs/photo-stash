@@ -6,6 +6,7 @@ import { createContext,useState,useEffect } from "react"
 export const ResultsContext = createContext()
 export const InputTextValue = createContext()
 export const CurrentPageContext = createContext()
+export const GoToSearchPageContext = createContext()
 
 export default function SearchResultsProvider({children}){
     const [ resultsArray,setResultsArray ] = useState([])
@@ -25,12 +26,18 @@ export default function SearchResultsProvider({children}){
         }
     }
 
+    const goToSearchPage = () =>{
+        
+    }
+
     return (
         <ResultsContext.Provider value={{resultsArray,handleFetchSearchQueryResults}}>
             <InputTextValue.Provider value={{inputTextValue,handleInputTextValueChange}}>
-                <CurrentPageContext.Provider value={{currentPage}}>
-                    {children}
-                </CurrentPageContext.Provider>
+                <GoToSearchPageContext.Provider value={{goToSearchPage}}>
+                    <CurrentPageContext.Provider value={{currentPage}}>
+                        {children}
+                    </CurrentPageContext.Provider>
+                </GoToSearchPageContext.Provider>
             </InputTextValue.Provider>
         </ResultsContext.Provider>
     )

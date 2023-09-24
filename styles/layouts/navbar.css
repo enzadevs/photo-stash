@@ -18,7 +18,7 @@ nav{
     border: 1px solid rgba(256,256,256, 0.3);
     color: white;
     padding: 0.25em;
-    height: 38px;
+    height: 40px;
     width: 145px;
 }
 
@@ -61,7 +61,7 @@ nav{
 .global-header-link{
     border: var(--border-ultra-thin);
     padding: 0 0.25em;
-    height: 38px;
+    height: 40px;
     width: 145px;
 }
 
@@ -71,14 +71,14 @@ nav{
 
 .global-profileboard-wrapper{
     margin-left: auto;
-    height: 38px;
+    height: 40px;
     width: 145px;
 }
 
 .global-signup-link{
     border: var(--border-ultra-thin);
     margin-left: auto;
-    height: 38px;
+    height: 40px;
     width: 5em;
 }
 

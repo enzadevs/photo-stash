@@ -1,14 +1,14 @@
 'use client'
 
 import 'styles/components/searchbox.css'
+import Link from 'next/link'
 import { useContext } from 'react'
-import { InputTextValue,ResultsContext,GoToSearchRouteContext } from 'contexts/SearchContext'
+import { InputTextValue,ResultsContext } from 'contexts/SearchContext'
 import { BsSearch } from 'react-icons/bs'
 
 export default function SearchBox(){
     let {inputTextValue,handleInputTextValueChange} = useContext(InputTextValue)
     let {handleFetchSearchQueryResults} = useContext(ResultsContext)
-    let {goToSearchPage} = useContext(GoToSearchRouteContext)
 
     return (
         <span className='searchbox-wrapper'>
@@ -25,12 +25,10 @@ export default function SearchBox(){
                     }
                 }}
             ></input>
-            <span 
+            <span
+                href='/en/search' 
                 className='search-icon-wrapper centre transition-fast'
-                onClick={()=>{
-                    goToSearchPage()
-                    handleFetchSearchQueryResults()
-                }}
+                onClick={()=>{handleFetchSearchQueryResults}}
             ><BsSearch className='icons'/></span>
         </span>
     )

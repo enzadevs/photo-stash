@@ -21,7 +21,7 @@ export default function ImageWrapper({src,alt,photographer,photostash_url=undefi
                     </span>
                     <Link 
                         href={src}
-                        className='image-icons-wrapper radius-small transition-fast centre'>
+                        className='next-link image-icons-wrapper radius-small transition-fast centre'>
                         <BiLinkExternal className='image-icons'/>
                     </Link>
                 </div>

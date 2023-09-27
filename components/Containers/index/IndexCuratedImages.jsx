@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-import IndexLoading from './IndexLoading'
 import { getCuratedPhotos } from 'modules/pexels_config'
 import ImageWrapper from '../ImageWrapper'
 
@@ -9,7 +7,7 @@ export default async function IndexCuratedImages(){
     return (
         <div className='index-curated-images-container margin-auto-1440'>
             <span className='column'>
-                {curatedPhotos?.slice(0,7).map(photo=>{
+                {curatedPhotos?.slice(0,8).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}
@@ -21,7 +19,7 @@ export default async function IndexCuratedImages(){
                 })}
             </span>
             <span className='column'>
-                {curatedPhotos?.slice(8,15).map(photo=>{
+                {curatedPhotos?.slice(9,18).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}
@@ -33,7 +31,7 @@ export default async function IndexCuratedImages(){
                 })}
             </span>
             <span className='column'>
-                {curatedPhotos?.slice(16,23).map(photo=>{
+                {curatedPhotos?.slice(19,27).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}

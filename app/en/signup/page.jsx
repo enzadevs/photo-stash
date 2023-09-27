@@ -3,8 +3,6 @@
 import 'styles/layouts/signup.css'
 import { useContext,useState } from 'react'
 import { IsSignedInContext } from 'contexts/RootContext'
-import Image from 'next/image'
-import SignupLeftImage from 'public/images/coffee_and_flower.jpeg'
 import RegistrationForm from 'components/Navigation/RegistrationForm'
 import LoginForm from 'components/Navigation/LoginForm'
 

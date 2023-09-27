@@ -1,5 +1,4 @@
 footer{
-    border-top: var(--border-ultra-thin);
     background-color: var(--grey-color);
     position: relative;
     bottom: 0;

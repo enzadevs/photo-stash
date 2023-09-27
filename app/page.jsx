@@ -9,6 +9,7 @@ import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
 import Footer from 'components/Navigation/Footer'
 
 export default function HomePage(){
+
     return (
         <div className='index-page-container'>
             <span className='index-top-container'>

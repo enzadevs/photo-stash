@@ -1,20 +1,18 @@
 .searchbox-wrapper{
-    border-radius: var(--border-radius-small);
     position: relative;
     height: 36px;
     width: 30em;
 }
 
 .search-input-field{
+    background-color: var(--grey-color);
     border: var(--border-ultra-thin);
-    border-radius: var(--border-radius-small);
     padding: .5em 2em .5em 0.75em;
     height: 38px;
     width: 30em;
 }
 
 .search-icon-wrapper{
-    border-radius: var(--border-radius-small);
     cursor: pointer;
     position: absolute;
     top: 0px;

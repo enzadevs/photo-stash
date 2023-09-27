@@ -11,9 +11,9 @@ export default function SearchBox(){
     let {handleFetchSearchQueryResults} = useContext(ResultsContext)
 
     return (
-        <span className='searchbox-wrapper'>
+        <span className='searchbox-wrapper radius-small'>
             <input 
-                className='search-input-field transition-fast hw100'
+                className='search-input-field transition-fast radius-small hw100'
                 type='text'
                 placeholder='Type here...'
                 maxLength={48}
@@ -27,7 +27,7 @@ export default function SearchBox(){
             ></input>
             <span
                 href='/en/search' 
-                className='search-icon-wrapper centre transition-fast'
+                className='search-icon-wrapper radius-small centre transition-fast'
                 onClick={()=>{handleFetchSearchQueryResults}}
             ><BsSearch className='icons'/></span>
         </span>

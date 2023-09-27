@@ -8,7 +8,6 @@
     --border-radius-circle: 50%;
     --box-shadow-full: rgba(91, 109, 104, 0.247) 0px 0px 10px 0px;
     --box-shadow-bottom: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    --lightest-grey-color: rgba(125,125,125, 0.3);
 }
 
 *{
@@ -40,6 +39,7 @@ body{
     --highlight-darker-color: #4F517D;
     --lightest-violet-color: #DCCFEC;
     --ultra-light-violet-color: #DDC4DD;
+    --grey-color: #f2f4f6;
     --red-color: rgb(235,81,96);
     --tiffany-mint-color: rgb(149,217,195);
     --yellow-color: rgb(255,177,0);

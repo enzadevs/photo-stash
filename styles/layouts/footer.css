@@ -1,8 +1,7 @@
 footer{
     border-top: var(--border-ultra-thin);
-    background-color: var(--lightest-violet-color);
+    background-color: var(--grey-color);
     position: relative;
-    margin-top: 1em;
     bottom: 0;
     height: 175px;
 }

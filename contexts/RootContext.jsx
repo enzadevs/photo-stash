@@ -7,7 +7,7 @@ export default function SignUpContextProvider({children}){
     const [ isSignedIn,setIsSignedIn ] = useState(false)
 
     return (
-        <IsSignedInContext.Provider value={[isSignedIn]}>
+        <IsSignedInContext.Provider value={{isSignedIn}}>
             {children}
         </IsSignedInContext.Provider>
     )

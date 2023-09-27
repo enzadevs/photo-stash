@@ -1,6 +1,7 @@
 'use client'
 
 import 'styles/components/image-wrapper.css'
+import Link from 'next/link'
 import CustomImage from './CustomImage'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
@@ -18,9 +19,11 @@ export default function ImageWrapper({src,alt,photographer,photostash_url=undefi
                     <span className='heart-icon-wrapper radius-small transition-fast centre'>
                         <BiSolidHeart className='image-icons'/>
                     </span>
-                    <span className='image-icons-wrapper radius-small transition-fast centre'>
+                    <Link 
+                        href={src}
+                        className='image-icons-wrapper radius-small transition-fast centre'>
                         <BiLinkExternal className='image-icons'/>
-                    </span>
+                    </Link>
                 </div>
                 <div className='botttom-container'>
                     <span className='profile-icon-wrapper centre'>

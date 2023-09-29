@@ -2,12 +2,14 @@ import { getCuratedPhotos } from 'modules/pexels_config'
 import ImageWrapper from '../ImageWrapper'
 
 export default async function IndexCuratedImages(){
-    const curatedPhotos = await getCuratedPhotos()
+    let currentPage = 0
+
+    const curatedPhotos = await getCuratedPhotos(currentPage)
 
     return (
         <div className='index-curated-images-container margin-auto-1440'>
             <span className='column'>
-                {curatedPhotos?.slice(0,8).map(photo=>{
+                {curatedPhotos?.slice(0,9).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}
@@ -19,7 +21,7 @@ export default async function IndexCuratedImages(){
                 })}
             </span>
             <span className='column'>
-                {curatedPhotos?.slice(9,18).map(photo=>{
+                {curatedPhotos?.slice(10,19).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}
@@ -31,7 +33,7 @@ export default async function IndexCuratedImages(){
                 })}
             </span>
             <span className='column'>
-                {curatedPhotos?.slice(19,27).map(photo=>{
+                {curatedPhotos?.slice(20,30).map(photo=>{
                     return(
                         <ImageWrapper
                             src={photo.src.large2x}

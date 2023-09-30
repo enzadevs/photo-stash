@@ -32,3 +32,26 @@
     gap: 1em;
     padding: 0 1em;
 }
+
+.show-more-div-container{
+    position: relative;
+    height: auto;
+    width: 460px;
+}
+
+.flower-image{
+    cursor: pointer;
+    filter: brightness(75%);
+    position: relative;
+    object-fit: cover;
+}
+
+.more-curated-link{
+    color: white;
+    position: absolute;
+    font-size: 1.25em;
+}
+
+.more-curated-link:hover{
+    font-size: 1.3em;
+}

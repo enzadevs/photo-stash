@@ -1,6 +1,6 @@
-#en-layout{
+/* #en-layout{
     
-}
+} */
 
 .global-navbar-wrapper{
     background-color: var(--primary-bg-color);
@@ -12,21 +12,13 @@
 }
 
 .search-results-container{
+    margin: 1em auto;
     height: auto;
+    max-width: 1440px;
 }
 
 .results-wrapper{
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    width: 100%;
-}
-
-.results-column{
-    display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-width: 0;
-    width: 100%;
+    columns: 360px 3;
+    gap: 1em;
+    padding: 0 1em;
 }

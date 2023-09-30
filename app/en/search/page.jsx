@@ -1,53 +1,30 @@
 'use client'
 
-import ImageWrapper from 'components/Containers/ImageWrapper'
+import { lazy } from 'react'
+import { Suspense } from 'react'
+const ImageWrapper = lazy(() => import('components/Containers/ImageWrapper.jsx'))
+import ImagesLoading from 'components/Functions/ImagesLoading'
 import { useContext } from 'react'
-import { ResultsContext,InputTextValue,CurrentPageContext } from 'contexts/SearchContext'
+import { ResultsContext,CurrentPageContext } from 'contexts/SearchContext'
 
 export default function SearchResults(){
     let {resultsArray} = useContext(ResultsContext)
-    let {inputTextValue} = useContext(InputTextValue)
-
 
     return (
         <div className='search-results-container'>
-            <div className='results-wrapper margin-auto-1440'>
-                <span className='results-column'>
-                    {resultsArray?.slice(0,10).map(item=>{
+            <div className='results-wrapper'>
+                <Suspense fallback={<ImagesLoading/>}>    
+                    {resultsArray?.map(photo=>{
                         return(
                             <ImageWrapper
-                            src={item.src.large2x}
-                            alt={item.alt}
-                            photographer={item.photographer}
-                            photostash_url={item.photostash_url}
-                        />
+                                src={photo.src.large2x}
+                                alt={photo.alt}
+                                photographer={photo.photographer}
+                                photostash_url={undefined}
+                            />
                         )
                     })}
-                </span>
-                <span className='results-column'>
-                    {resultsArray?.slice(11,20).map(item=>{
-                        return(
-                            <ImageWrapper
-                            src={item.src.large2x}
-                            alt={item.alt}
-                            photographer={item.photographer}
-                            photostash_url={item.photostash_url}
-                        />
-                        )
-                    })}
-                </span>
-                <span className='results-column'>
-                    {resultsArray?.slice(21,30).map(item=>{
-                        return(
-                            <ImageWrapper
-                            src={item.src.large2x}
-                            alt={item.alt}
-                            photographer={item.photographer}
-                            photostash_url={item.photostash_url}
-                        />
-                        )
-                    })}
-                </span>
+                </Suspense>
             </div>
         </div>
     )

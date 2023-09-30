@@ -8,6 +8,7 @@ export const getSearchQueryPhotos = async(inputTextValue,currentPage)=>{
           },
         }
       )
+      await new Promise((resolve) => resolve(res))
       const responseJson = await res.json()
       return responseJson.photos
 }
@@ -20,7 +21,8 @@ export const getCuratedPhotos = async (currentPage) => {
         },
       }
     )
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // await new Promise((resolve) => setTimeout(resolve, 1000))
+    await new Promise((resolve) => resolve(res))
     const responseJson = await res.json()
     return responseJson.photos
 }

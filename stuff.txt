@@ -94,3 +94,49 @@ You can set layout="fill" and objectFit="contain" to your Image so that it maint
 
 
 sizes="(max-width: 650px) calc((100vw - 30px - 15px) / 2), (max-width: 900px) calc((100vw - 30px - 15px) / 2), (max-width: 1440px) calc((100vw - 60px - 60px) / 3), (max-width: 1600px) calc((100vw - 160px - 60px) / 3), calc((1600pxpx - 160px - 60px) / 3)"
+
+
+
+
+
+
+
+
+    <div className='index-curated-images-container margin-auto-1440'>
+            <span className='column'>
+                {curatedPhotos?.slice(0,9).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
+            <span className='column'>
+                {curatedPhotos?.slice(10,19).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
+            <span className='column'>
+                {curatedPhotos?.slice(20,30).map(photo=>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.photostash_url}
+                        />
+                    )
+                })}
+            </span>
+        </div>

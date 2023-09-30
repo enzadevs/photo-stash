@@ -1,8 +1,8 @@
 .photo-wrapper{
     display: flex;
     flex-flow: column nowrap;
-    position: relative;
-    margin: 1em 0.5em;
+    position: relative; 
+    margin-bottom: 1em;
 }
 
 .custom-image-component{

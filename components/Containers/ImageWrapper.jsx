@@ -3,17 +3,21 @@
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
 import CustomImage from './CustomImage'
+import { Suspense } from 'react'
+import ImageLoadingFX from 'components/ImageLoadingFX'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
 export default function ImageWrapper({src,alt,photographer,photostash_url=undefined}){
     return (
         <div className='photo-wrapper radius-small'>
-            <CustomImage
-                src={src}
-                alt={alt}
-                photographer={photographer}
-                photostash_url={photostash_url}
-            />
+            <Suspense fallback={<ImageLoadingFX/>}>
+                <CustomImage
+                    src={src}
+                    alt={alt}
+                    photographer={photographer}
+                    photostash_url={photostash_url}
+                />
+            </Suspense>
             <span className='image-buttons hw100 radius-small transition-fast'>
                 <div className='top-right-buttons'>
                     <span className='heart-icon-wrapper radius-small transition-fast centre'>

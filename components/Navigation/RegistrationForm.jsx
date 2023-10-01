@@ -3,7 +3,7 @@ import {BsPersonCircle} from 'react-icons/bs'
 import {GoMail} from 'react-icons/go'
 import {RiLockPasswordLine} from 'react-icons/ri'
 
-export default function RegistrationForm({changeHasAccount}){
+export default function RegistrationForm({changeHasAccount,handleInputTextValueChange}){
     return(
         <form className='registration-container'>
             <p className='fill-text'>Register filling form below:</p>

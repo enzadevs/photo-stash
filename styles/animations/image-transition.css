@@ -1,0 +1,14 @@
+.image-opacity-fx{
+    opacity: 1;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-duration: 175ms;
+}
+
+.duration{
+    transition-duration: 0.75s;
+}
+
+.opacity-0{
+    opacity: 0;
+}

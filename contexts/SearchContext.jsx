@@ -1,24 +1,21 @@
 'use client'
 
 import { getSearchQueryPhotos } from "modules/pexels_config"
-import { createContext,useState,useEffect } from "react"
+import { createContext,useState,useRef } from "react"
 
 export const ResultsContext = createContext()
 export const InputTextValue = createContext()
-export const CurrentPageContext = createContext()
 
 export default function SearchResultsProvider({children}){
     const [ resultsArray,setResultsArray ] = useState([])
-    const [ inputTextValue,setInputTextValue ] = useState('')
     const [ currentPage,setCurrentPage ] = useState(1)
 
-    function handleInputTextValueChange(e){
-        setInputTextValue(e.target.value)
-    }
-
-    const handleFetchSearchQueryResults = async() =>{
-        if (inputTextValue == ''){
-            alert('Empty string')
+    const inputTextRef = useRef('')
+    
+    const handleFetchPhotos = async() =>{
+        const inputTextValue = inputTextRef.current.value
+        if (inputTextValue === ''){
+            alert('Empty input field')
         } else {
             const res = await getSearchQueryPhotos(inputTextValue,currentPage)
             setResultsArray(res)
@@ -26,11 +23,9 @@ export default function SearchResultsProvider({children}){
     }
 
     return (
-        <ResultsContext.Provider value={{resultsArray,handleFetchSearchQueryResults}}>
-            <InputTextValue.Provider value={{inputTextValue,handleInputTextValueChange}}>
-                <CurrentPageContext.Provider value={{currentPage}}>
-                    {children}
-                </CurrentPageContext.Provider>
+        <ResultsContext.Provider value={{resultsArray}}>
+            <InputTextValue.Provider value={{inputTextRef,handleFetchPhotos}}>
+                {children}
             </InputTextValue.Provider>
         </ResultsContext.Provider>
     )

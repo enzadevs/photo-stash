@@ -1,21 +1,20 @@
 'use client'
 
-import 'styles/components/image-wrapper.css'
+import { lazy } from 'react'
 import Link from 'next/link'
-import CustomImage from './CustomImage'
 import { Suspense } from 'react'
-import ImageLoadingFX from 'components/ImageLoadingFX'
+import 'styles/components/image-wrapper.css'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
+import ImageLoading from 'components/Functions/ImageLoading'
+const CustomImage = lazy(() => import('/components/Containers/CustomImage.jsx'))
 
 export default function ImageWrapper({src,alt,photographer,photostash_url=undefined}){
     return (
         <div className='photo-wrapper radius-small'>
-            <Suspense fallback={<ImageLoadingFX/>}>
+            <Suspense fallback={<ImageLoading/>}>
                 <CustomImage
                     src={src}
                     alt={alt}
-                    photographer={photographer}
-                    photostash_url={photostash_url}
                 />
             </Suspense>
             <span className='image-buttons hw100 radius-small transition-fast'>

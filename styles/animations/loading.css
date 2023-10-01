@@ -1,4 +1,4 @@
-.loading-photo-container{
+.loading-skeleton{
     background-color: var(--grey-color);
     background: linear-gradient(
         100deg,
@@ -9,12 +9,25 @@
     background-size: 200% 100%;
     background-position-x: 180%;
     animation: 1.75s loading ease-in-out infinite;
-    height: 700px;
-    max-width: 460px;
 }
 
 @keyframes loading {
     to {
         background-position-x: -20%;
     }
+}
+
+.loading-photo-container{
+    height: 700px;
+    max-width: 460px;
+}
+
+.index-loading-div{
+    height: 2500px;
+    width: 100%;
+}
+
+.pseudo-image{
+    height: 700px;
+    width: 100%;
 }

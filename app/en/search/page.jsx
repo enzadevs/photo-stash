@@ -2,7 +2,7 @@
 
 import ImageWrapper from 'components/Containers/ImageWrapper'
 import { useContext } from 'react'
-import { ResultsContext,CurrentPageContext } from 'contexts/SearchContext'
+import { ResultsContext} from 'contexts/SearchContext'
 
 export default function SearchResults(){
     let {resultsArray} = useContext(ResultsContext)
@@ -13,7 +13,7 @@ export default function SearchResults(){
                 {resultsArray?.map(photo=>{
                     return(
                         <ImageWrapper
-                            src={photo.src.medium}
+                            src={photo.src.large2x}
                             alt={photo.alt}
                             photographer={photo.photographer}
                             photostash_url={undefined}

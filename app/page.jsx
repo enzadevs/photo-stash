@@ -1,12 +1,10 @@
 import 'styles/layouts/index.css'
 
-import { Suspense } from 'react'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
 import SearchResultsProvider from 'contexts/SearchContext'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
-import IndexLoading from './loading'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
 import Footer from 'components/Navigation/Footer'
 
@@ -30,9 +28,7 @@ export default function HomePage(){
                 </SearchResultsProvider>
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>
-            <Suspense fallback={<IndexLoading/>}>
-                <IndexCuratedImages/>
-            </Suspense>
+            <IndexCuratedImages/>
             <Footer/>
         </div>
     )

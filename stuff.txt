@@ -173,3 +173,7 @@ export default async function CustomImage({src,alt}){
         ></Image>
     )
 }
+
+the simplest way is to add an onclick="" event listener for your links.
+
+you're going to use: window.history.pushState() to update the url, document.title to update the title, window.history.replaceState() to fix the history, and event.preventDefault() so the link won't refresh the page. update the content with ajax. you can also use this function to include main content based on the url.

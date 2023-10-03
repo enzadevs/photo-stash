@@ -1,5 +1,5 @@
 import 'styles/layouts/index.css'
-
+import 'styles/animations/image-transition.css'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
 import SearchResultsProvider from 'contexts/SearchContext'
@@ -14,7 +14,7 @@ export default function HomePage(){
         <div className='index-page-container'>
             <span className='index-top-container'>
                 <Image
-                    className='index-bg-image'
+                    className='index-bg-image image-opacity-fx duration'
                     src={IndexBGImage}
                     quality={50}
                     priority={true}

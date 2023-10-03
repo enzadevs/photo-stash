@@ -3,7 +3,7 @@
 import 'styles/layouts/curated.css'
 import { v4 as uuidv4 } from 'uuid'
 import { useState,useEffect } from 'react'
-import { getCuratedPhotos } from 'modules/pexels_config'
+import { getCuratedPhotos } from 'configs/pexels_config'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 
 export default function CuratePhotosPage(){

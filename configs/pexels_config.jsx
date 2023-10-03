@@ -1,7 +1,7 @@
-const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
+export const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
-export const getSearchQueryPhotos = async(inputTextValue,currentPage)=>{
-    const res = await fetch(`https://api.pexels.com/v1/search?query=${inputTextValue}?page=${currentPage}&per_page=45`,
+export const getSearchQueryPhotos = async(inputTextValue,currentPage,perPageImages)=>{
+    const res = await fetch(`https://api.pexels.com/v1/search?query=${inputTextValue}?page=${currentPage}&per_page=${perPageImages}`,
         {
           headers: {
             Authorization: API_KEY,

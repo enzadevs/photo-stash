@@ -5,15 +5,15 @@ import { useContext } from 'react'
 import { ResultsContext} from 'contexts/SearchContext'
 
 export default function SearchResults(){
-    let {resultsArray} = useContext(ResultsContext)
+    const {resultsArray,loadMorePhotos,perPageImages} = useContext(ResultsContext)
 
     return (
         <div className='search-results-container'>
             <div className='results-wrapper'>  
-                {resultsArray?.map(photo=>{
+                {resultsArray.photos?.map(photo=>{
                     return(
                         <ImageWrapper
-                            src={photo.src.large2x}
+                            src={photo.src.large}
                             alt={photo.alt}
                             photographer={photo.photographer}
                             photostash_url={undefined}
@@ -21,6 +21,10 @@ export default function SearchResults(){
                     )
                 })}
             </div>
+            <button onClick={loadMorePhotos}>
+                CLICK
+            </button>
+            <h1>{perPageImages}</h1>
         </div>
     )
 }

@@ -1,16 +1,13 @@
-'use client'
-
-import { getCuratedPhotos } from 'modules/pexels_config'
+import { getCuratedPhotos } from 'configs/pexels_config'
 import { v4 as uuidv4 } from 'uuid'
-import { useState } from 'react'
 import ImageWrapper from '../ImageWrapper'
 import Image from 'next/image'
 import Link from 'next/link'
 import FlowerImage from '/public/images/close-up-gladiolus-flower-details.jpg'
 
 export default async function IndexCuratedImages(){
-    const [ currentPage,setCurrentPage ] = useState(0)
-    const [ perPageImages,setPerPageImages ] = useState(20)
+    let currentPage = 0
+    let perPageImages = 24
     const curatedPhotos = await getCuratedPhotos(currentPage,perPageImages)
 
     return (
@@ -19,10 +16,11 @@ export default async function IndexCuratedImages(){
                 return(
                     <ImageWrapper
                         key={uuidv4()}
-                        src={photo.src.large2x}
+                        src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                         alt={photo.alt}
                         photographer={photo.photographer}
                         photostash_url={undefined}
+                        quality={50}
                     />
                 )
             })}

@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import Image from 'next/image'
 import ErrorImage from 'public/images/actions/error_pink.jpg'
 
-export default async function CustomImage({src,alt}){
+export default async function CustomImage({src,alt,quality=80}){
     const [ imgSource,setImgSource ] = useState(src)
 
     useEffect(()=>{
@@ -17,6 +17,7 @@ export default async function CustomImage({src,alt}){
             src={imgSource}
             width={0}
             height={0}
+            quality={quality}
             style={{ width: '100%', height: 'auto' }}
             sizes="(max-width: 650px) calc((100vw - 30px - 15px) / 2), (max-width: 900px) calc((100vw - 30px - 15px) / 2), (max-width: 1440px) calc((100vw - 60px - 60px) / 3), (max-width: 1600px) calc((100vw - 160px - 60px) / 3), calc((1600pxpx - 160px - 60px) / 3)"
             onLoadingComplete={(image)=>{

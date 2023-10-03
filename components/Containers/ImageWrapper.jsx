@@ -8,13 +8,14 @@ import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi
 import ImageLoading from 'components/Functions/ImageLoading'
 const CustomImage = lazy(() => import('/components/Containers/CustomImage.jsx'))
 
-export default function ImageWrapper({src,alt,photographer}){
+export default function ImageWrapper({src,alt,photographer,quality}){
     return (
         <div className='photo-wrapper radius-small'>
             <Suspense fallback={<ImageLoading/>}>
                 <CustomImage
                     src={src}
                     alt={alt}
+                    quality={quality}
                 />
             </Suspense>
             <span className='image-buttons hw100 radius-small transition-fast'>

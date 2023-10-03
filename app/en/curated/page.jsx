@@ -1,20 +1,16 @@
-'use client'
-
 import 'styles/layouts/curated.css'
 import { v4 as uuidv4 } from 'uuid'
-import { useState,useEffect } from 'react'
 import { getCuratedPhotos } from 'configs/pexels_config'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 
 export default function CuratePhotosPage(){
-    const [ currentPage,setCurrentPage ] = useState(0)
-    const [ perPageImages,setPerPageImages ] = useState(24)
+    const curatedPhotosArray = getCuratedPhotos(0,29)
 
     return (
         <div className='curated-photos-container margin-auto-1440'>
             <h3 className='curated-header'>Curated photos by Pexels team</h3>
             <div className='curated-wrapper'>
-                {curatedPhotos?.map( photo =>{
+                {curatedPhotosArray?.map( photo =>{
                     return(
                         <ImageWrapper
                             key={uuidv4()}

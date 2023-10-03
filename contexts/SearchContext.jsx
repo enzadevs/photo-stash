@@ -19,7 +19,7 @@ export default function SearchResultsProvider({children}){
         setResultsArray(results)
     }
 
-    const loadMorePhotos = async() =>{
+    const loadMorePhotos = () =>{
         setPerPageImages(currentPhotos => currentPhotos + 5)
     }
 

@@ -14,3 +14,5 @@ Index Page at Slow 3G Speed:
 					-Finish: 9.05s
 					-DOMLoaded: 2.62s
 					-Load: 2.68s
+
+                        window.location.href = 'search'

@@ -8,7 +8,6 @@ export const metadata = {
 import 'styles/global.css'
 import { StrictMode } from 'react'
 import localFont from 'next/font/local'
-import SignUpContextProvider from 'contexts/RootContext'
 
 const sspro = localFont({
     src: '../public/fonts/sspro_regular.ttf'
@@ -18,11 +17,9 @@ export default function RootLayout({ children }) {
     return (
         <StrictMode>
             <html lang="en" className={sspro.className}>
-                <SignUpContextProvider>
-                    <body>
-                        {children}
-                    </body>
-                </SignUpContextProvider>
+                <body>
+                    {children}
+                </body>
             </html>
         </StrictMode>
   )

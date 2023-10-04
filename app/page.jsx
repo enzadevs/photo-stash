@@ -2,7 +2,6 @@ import 'styles/layouts/index.css'
 import 'styles/animations/image-transition.css'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
-import SearchResultsProvider from 'contexts/SearchContext'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
@@ -21,11 +20,9 @@ export default function HomePage(){
                     fill
                 ></Image>
                 <IndexNavBar/>
-                <SearchResultsProvider>
-                    <div className='index-searchbox-container margin-auto-1440 centre'>
+                <div className='index-searchbox-container margin-auto-1440 centre'>
                         <SearchBox/>
-                    </div>
-                </SearchResultsProvider>
+                </div>
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>
             <IndexCuratedImages/>

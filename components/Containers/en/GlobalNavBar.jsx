@@ -2,7 +2,6 @@ import 'styles/layouts/navbar.css'
 
 import Link from 'next/link'
 import SearchBox from 'components/Functions/SearchBox'
-import ProfileBoard from 'components/Functions/ProfileBoard'
 
 export default function GlobalNavBar(){
     return (
@@ -12,11 +11,6 @@ export default function GlobalNavBar(){
             </Link>
             <span className='global-searchbox-wrapper centre'>
                 <SearchBox/>
-            </span>
-            <span className='global-profileboard-wrapper'>
-                <ProfileBoard
-                    styles={'global-signup-link next-link radius-small centre transition-fast'}
-                />
             </span>
         </nav>
     )

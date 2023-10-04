@@ -34,20 +34,6 @@ nav{
     padding: 0 0.3em;
 }
 
-.signup-link{
-    border: 1px solid rgba(256,256,256, 0.3);
-    color: white;
-    margin-left: auto;
-    height: 38px;
-    width: 5em;
-
-}
-
-.signup-link:hover{
-    border: var(--border-thin);
-    border-color: white;
-}
-
 #global-navbar{
     display: flex;
     flex-flow: row nowrap;
@@ -69,20 +55,7 @@ nav{
     flex-grow: 1;
 }
 
-.global-profileboard-wrapper{
-    margin-left: auto;
-    height: 40px;
-    width: 145px;
-}
-
-.global-signup-link{
-    border: var(--border-ultra-thin);
-    margin-left: auto;
-    height: 40px;
-    width: 5em;
-}
-
-.global-header-link:hover ,.global-signup-link:hover{
+.global-header-link:hover{
     border: var(--border-thin);
     border-color: var(--highlight-color);
 }

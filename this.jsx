@@ -2,7 +2,7 @@
 
 const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 import 'styles/layouts/en_layout.css'
-import { createContext,useState,useEffect,useRef } from 'react'
+import { createContext,useState,useEffect } from 'react'
 import GlobalNavBar from 'components/Containers/en/GlobalNavBar'
 import Footer from 'components/Navigation/Footer'
 
@@ -26,10 +26,6 @@ export default function EnLayout({children}){
     async function setPhotos(){
         setResultsArray(await fetchPhotos())
     }
-
-    useEffect(()=>{
-
-    })
 
     return (
         <div id='en-layout'>

@@ -2,6 +2,7 @@ import 'styles/layouts/navbar.css'
 
 import Link from 'next/link'
 import SearchBox from 'components/Functions/SearchBox'
+import {BiSolidHeart} from 'react-icons/bi'
 
 export default function GlobalNavBar(){
     return (
@@ -12,6 +13,9 @@ export default function GlobalNavBar(){
             <span className='global-searchbox-wrapper centre'>
                 <SearchBox/>
             </span>
+            <Link href='/en/favourites' className='global-heart-wrapper next-link centre radius-small transition'>
+                <BiSolidHeart className='heart-icon'/>
+            </Link>
         </nav>
     )
 }

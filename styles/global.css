@@ -30,9 +30,11 @@
     border: 2px solid #ffffff;
 }
 
-body{
+html{
     scroll-behavior: smooth;
-    /* ! Colors */
+}
+
+body{
     --main-text-color: #000000;
     --primary-bg-color: #fffffe;
     --secondary-bg-color: #1A3A3A;
@@ -44,8 +46,6 @@ body{
     --red-color: rgb(235,81,96);
     --tiffany-mint-color: rgb(149,217,195);
     --yellow-color: rgb(255,177,0);
-
-    /* ! Stuff */
     background-color: var(--primary-bg-color);
     color: var(--main-text-color);
     position: relative;
@@ -64,8 +64,8 @@ body{
 }
 
 @font-face {
-    font-family: sspro;
-    src: url(../public/fonts/sspro_regular.ttf);
+    font-family: lato;
+    src: url(../public/fonts/lato_regular.ttf);
 }
 
 input{

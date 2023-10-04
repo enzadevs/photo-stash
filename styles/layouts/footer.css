@@ -27,7 +27,7 @@ footer{
 }
 
 .footer-links:hover{
-    color: white;
+    color: var(--highlight-color);
 }
 
 .footer-icons{

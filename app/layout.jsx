@@ -9,14 +9,14 @@ import 'styles/global.css'
 import { StrictMode } from 'react'
 import localFont from 'next/font/local'
 
-const sspro = localFont({
-    src: '../public/fonts/sspro_regular.ttf'
+const lato = localFont({
+    src: '../public/fonts/lato_regular.ttf'
 })
 
 export default function RootLayout({ children }) {
     return (
         <StrictMode>
-            <html lang="en" className={sspro.className}>
+            <html lang="en" className={lato.className}>
                 <body>
                     {children}
                 </body>

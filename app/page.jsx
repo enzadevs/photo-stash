@@ -15,9 +15,10 @@ export default function HomePage(){
                 <Image
                     className='index-bg-image image-opacity-fx duration'
                     src={IndexBGImage}
-                    quality={50}
+                    quality={75}
                     priority={true}
                     fill
+                    sizes='100vw'
                 ></Image>
                 <IndexNavBar/>
                 <div className='index-searchbox-container margin-auto-1440 centre'>

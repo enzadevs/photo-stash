@@ -19,7 +19,7 @@ export default async function CustomImage({src,alt,quality=80}){
             height={0}
             quality={quality}
             style={{ width: '100%', height: 'auto' }}
-            sizes="(max-width: 650px) calc((100vw - 30px - 15px) / 2), (max-width: 900px) calc((100vw - 30px - 15px) / 2), (max-width: 1440px) calc((100vw - 60px - 60px) / 3), (max-width: 1600px) calc((100vw - 160px - 60px) / 3), calc((1600pxpx - 160px - 60px) / 3)"
+            sizes='(max-width: 500px) 100vw, (max-width: 850px) 70vw, 100vw'
             onLoadingComplete={(image)=>{
                 image.classList.remove('opacity-0')
             }}

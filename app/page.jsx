@@ -4,6 +4,8 @@ import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
+import { Suspense } from 'react'
+import IndexLoading from './loading'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
 import Footer from 'components/Navigation/Footer'
 
@@ -26,7 +28,9 @@ export default function HomePage(){
                 </div>
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>
-            <IndexCuratedImages/>
+            <Suspense fallback={<IndexLoading/>}>
+                <IndexCuratedImages/>
+            </Suspense>
             <Footer/>
         </div>
     )

@@ -22,9 +22,8 @@
     max-width: 460px;
 }
 
-.index-loading-div{
+.index-loading-container{
     height: 2500px;
-    width: 100%;
 }
 
 .pseudo-image{

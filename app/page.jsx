@@ -20,7 +20,6 @@ export default function HomePage(){
                     quality={75}
                     priority={true}
                     fill
-                    sizes='100vw'
                 ></Image>
                 <IndexNavBar/>
                 <div className='index-searchbox-container margin-auto-1440 centre'>

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import FlowerImage from '/public/images/close-up-gladiolus-flower-details.jpg'
 
 export default async function IndexCuratedImages(){
-    let currentPage = 1
+    let currentPage = 0
     let perPageImages = 23
     const curatedPhotos = await getCuratedPhotos(currentPage,perPageImages)
 

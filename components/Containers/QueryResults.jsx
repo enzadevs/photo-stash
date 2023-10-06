@@ -14,15 +14,28 @@ const getPhotos = async () => {
 }
 
 export const useResultsStore = create((set)=>({
-    resultsArray: [],
-    updateResultsArray: async() => {
-        const fetchedPhotos = await getPhotos()
-        console.log(fetchedPhotos)
-        set({resultsArray: fetchedPhotos})
-    }
+    queryText: '',
+    currentPage: 0,
+    perPageImages: 24,
+    resultsArray: 0,
+    updateQueryText: queryText => set(() => ({queryText: queryText})),
+    updateCurrentPage: currentPage => set(() => ({currentPage: currentPage})),
+    updatePerPageImages: perPageImages => set(() => ({perPageImages: perPageImages})),
+    // updateResultsArray: async() => {
+    //     const fetchedPhotos = await getPhotos()
+    //     console.log(fetchedPhotos)
+    //     set({resultsArray: fetchedPhotos})
+    // }
+    // updateResultsArray: async() => {
+    //     // const response = await fetch(`https://api.pexels.com/v1/search?query=${queryText}?page=${currentPage}&per_page=${perPageImages}`,
+    //     //     {
+    //     //         headers: {
+    //     //             Authorization: API_KEY,
+    //     //         },
+    //     //     }
+    //     // )
+    //     // const data = await response.json()
+    //     // set({resultsArray: data.photos})
+    // }
+    updateResultsArray: () => set((state) => ({ resultsArray: state.resultsArray + 1 }))
 }))
-
-// {
-//     // await new Promise(resolve => setTimeout(resolve,2500))
-//     console.log(true)
-// }

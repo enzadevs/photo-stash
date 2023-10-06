@@ -20,22 +20,16 @@ export default function SearchBox(){
                 value={queryText}
                 onChange={e => updateQueryText(e.currentTarget.value)}    
                 onKeyUp={(e) =>{
-                    if(e.key === 'Enter' && window.location.pathname !== 'en/search'){
-                        window.location.pathname = 'en/search'
-                    } else {
-                        console.log(true)
-                    }
+                    if(e.key === 'Enter'){
+                        updateResultsArray()
+                    } else return
                 }}
             ></input>
             <span
                 href='/en/search' 
                 className='search-icon-wrapper radius-small centre transition-fast'
                 onClick={()=>{
-                    if(window.location.pathname !== '/en/search'){
-                        window.location.pathname = 'en/search'
-                    } else {
-                        console.log(true)
-                    }
+                    updateResultsArray()
                 }}
             ><BsSearch className='icons'/></span>
         </span>

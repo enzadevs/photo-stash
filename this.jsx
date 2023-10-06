@@ -39,3 +39,9 @@ export default function EnLayout({children}){
         </div>
     )
 }
+
+if(window.location.pathname !== '/en/search'){
+    window.location.pathname = 'en/search'
+} else {
+    console.log(true)
+}

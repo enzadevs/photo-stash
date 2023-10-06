@@ -9,7 +9,11 @@ export default function SearchResults(){
     return (
         <div className='search-results-container'>
             <div className='results-wrapper'>
-            <h2>{resultsArray}</h2>
+            {resultsArray.map(item=>{
+                return(
+                    <p>{item.id}</p>
+                )
+            })}
             </div>
         </div>
     )

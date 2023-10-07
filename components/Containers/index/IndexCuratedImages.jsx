@@ -1,14 +1,11 @@
 import { getCuratedPhotos } from 'configs/pexels_config'
 import { v4 as uuidv4 } from 'uuid'
 import ImageWrapper from '../ImageWrapper'
-import Image from 'next/image'
-import Link from 'next/link'
-import FlowerImage from '/public/images/close-up-gladiolus-flower-details.jpg'
 
 export default async function IndexCuratedImages(){
     let currentPage = 0
     let perPageImages = 23
-    const curatedPhotos = await getCuratedPhotos(currentPage,perPageImages)
+    const curatedPhotos = await new Promise (resolve => setTimeout(resolve(getCuratedPhotos(currentPage,perPageImages)), 3000))
 
     return (
         <div className='columns-container margin-auto-1440'>

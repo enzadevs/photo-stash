@@ -27,10 +27,15 @@
 .search-icon-wrapper:hover{
     color: var(--highlight-color);
 }
-/* 
+
 @media only screen and (max-width: 768px) {
     .searchbox-wrapper{
-        height: 32px;
+        width: 24em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .searchbox-wrapper{
         width: 18em;
     }
-} */
+}

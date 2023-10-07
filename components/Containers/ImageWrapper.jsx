@@ -29,7 +29,7 @@ export default function ImageWrapper({src,alt,photographer,quality}){
                         <BiLinkExternal className='image-icons'/>
                     </Link>
                 </div>
-                <div className='botttom-container'>
+                <div className='bottom-container'>
                     <span className='profile-icon-wrapper centre'>
                         <BiSolidUser className='image-icons'/>
                     </span>

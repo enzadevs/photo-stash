@@ -54,7 +54,7 @@
     width: 20px;
 }
 
-.botttom-container{
+.bottom-container{
     background-color: rgba(50, 50, 50, 0.25);
     position: absolute;
     bottom: 0;
@@ -81,11 +81,15 @@
 .download-icon-wrapper{
     margin-left: auto;
 }
-/* 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1152px) {
+    .photo-wrapper{
+        margin-bottom: 0.5em;
+    }
+
     .top-right-buttons{
-        margin-right: 0.25em;
-        height: 74px;
+        margin-right: 0.5em;
+        height: 5.25em;
     }
 
     .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
@@ -94,16 +98,47 @@
     }
 
     .image-icons{
-        height: 16px;
-        width: 16px;
+        height: 18px;
+        width: 18px;
     }
 
-    .botttom-container{
-        padding: 0 0.25em;
-        height: 40px;
+    .bottom-container{
+        padding: 0 0.5em;
+        height: 3em;
     }
 
     .photographer-name{
         margin-left: 0.25em;
+    }
+}
+
+/* @media only screen and (max-width: 572px) {
+    .photo-wrapper{
+        margin-bottom: 5px;
+    }
+
+    .top-right-buttons{
+        margin-right: 0.25em;
+        height: 4.25em;
+    }
+
+    .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
+        height: 30px;
+        width: 30px;
+    }
+
+    .image-icons{
+        height: 16px;
+        width: 16px;
+    }
+
+    .bottom-container{
+        padding: 0 0.25em;
+        height: 2.5em;
+    }
+
+    .photographer-name{
+        font-size: 14px;
+        margin-left: 5px;
     }
 } */

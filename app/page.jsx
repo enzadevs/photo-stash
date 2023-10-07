@@ -28,9 +28,11 @@ export default function HomePage(){
                 </div>
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>
+            <div className='index-min-height'>
             <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedImages/>
             </Suspense>
+            </div>
         </div>
     )
 }

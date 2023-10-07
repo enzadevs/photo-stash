@@ -18,7 +18,7 @@ export default function ImageWrapper({src,alt,photographer,quality}){
                     quality={quality}
                 />
             </Suspense>
-            <span className='image-buttons hw100 radius-small transition-fast'>
+            <span className='image-buttons hw100 transition-fast radius-small'>
                 <div className='top-right-buttons'>
                     <span className='heart-icon-wrapper radius-small transition-fast centre'>
                         <BiSolidHeart className='image-icons'/>

@@ -24,18 +24,6 @@ export default async function IndexCuratedImages(){
                     />
                 )
             })}
-            <div className='show-more-div-container centre radius-small'>
-                <Image
-                    className='flower-image radius-small'
-                    src={FlowerImage}
-                    alt='collage image of random photos'
-                    height={700}
-                    width={460}
-                ></Image>
-                <Link href='/en/curated' className='next-link more-curated-link hw100 centre radius-small transition-fast'>
-                    More curated photos
-                </Link>
-            </div>
         </div>
     )
 }

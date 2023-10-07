@@ -18,9 +18,8 @@ nav{
 .company-header-link{
     border: 1px solid rgba(256,256,256, 0.3);
     color: white;
-    padding: 0.25em;
     height: 40px;
-    width: 152px;
+    width: 10em;
 }
 
 .company-header-link:hover{
@@ -47,9 +46,8 @@ nav{
 
 .global-header-link{
     border: var(--border-ultra-thin);
-    padding: 0 0.25em;
     height: 40px;
-    width: 152px;
+    width: 10em;
 }
 
 .global-searchbox-wrapper{
@@ -89,4 +87,45 @@ nav{
     border: var(--border-thin);
     border-color: var(--highlight-color);
     color: var(--red-color);
+}
+
+@media only screen and (max-width: 768px) {
+    #index-navbar{
+        padding: 0 0.5em;
+        height: 3em;
+    }
+
+    .company-header-link{
+        font-size: 14px;
+        padding: 0 0.25em;
+        height: 36px;
+        width: auto;
+    }
+
+    #global-navbar{
+        padding: 0 0.5em;
+        height: 3em;
+    }
+
+    .global-header-link{
+        font-size: 14px;
+        padding: 0 0.25em;
+        height: 36px;
+        width: auto;
+    }
+
+    .heart-icon{
+        height: 18px;
+        width: 18px;
+    }
+
+    .index-heart-wrapper{
+        height: 36px;
+        width: 36px;
+    }
+
+    .global-heart-wrapper{
+        height: 36px;
+        width: 36px;
+    }
 }

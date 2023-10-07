@@ -81,3 +81,29 @@
 .download-icon-wrapper{
     margin-left: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .top-right-buttons{
+        margin-right: 0.25em;
+        height: 74px;
+    }
+
+    .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
+        height: 34px;
+        width: 34px;
+    }
+
+    .image-icons{
+        height: 16px;
+        width: 16px;
+    }
+
+    .botttom-container{
+        padding: 0 0.25em;
+        height: 40px;
+    }
+
+    .photographer-name{
+        margin-left: 0.25em;
+    }
+}

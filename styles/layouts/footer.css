@@ -2,6 +2,7 @@ footer{
     background-color: var(--grey-color);
     position: relative;
     bottom: 0;
+    margin-top: 0.5em;
     height: 175px;
 }
 

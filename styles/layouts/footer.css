@@ -34,9 +34,4 @@ footer{
     footer{
         font-size: 14px;
     }
-
-    .footer-columns{
-        flex: 50%;
-        max-width: 100%;    
-    }
 }

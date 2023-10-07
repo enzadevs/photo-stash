@@ -1,7 +1,5 @@
 import 'styles/layouts/footer.css'
 import Link from 'next/link'
-import {BiLogoGithub} from 'react-icons/bi'
-import {SiPexels} from 'react-icons/si'
 
 export default function Footer(){
     return (
@@ -33,16 +31,6 @@ export default function Footer(){
                         </Link>
                         <Link href='https://github.com/enzadevs' className='next-link footer-links transition-fast'>
                             Github
-                        </Link>
-                    </span>
-                </span>
-                <span className='footer-columns'>
-                    <span className='footer-links-wrapper'>
-                        <Link href='https://github.com/enzadevs/photo-stash' className='next-link'>
-                            <BiLogoGithub className='footer-icons'/>
-                        </Link>
-                        <Link href='https://www.pexels.com/api/documentation/?language=javascript' className='next-link'>
-                            <SiPexels className='footer-icons'/>
                         </Link>
                     </span>
                 </span>

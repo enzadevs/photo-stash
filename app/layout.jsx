@@ -8,6 +8,7 @@ export const metadata = {
 import 'styles/global.css'
 import { StrictMode } from 'react'
 import localFont from 'next/font/local'
+import Footer from 'components/Navigation/Footer'
 
 const lato = localFont({
     src: '../public/fonts/lato_regular.ttf'
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
             <html lang="en" className={lato.className}>
                 <body>
                     {children}
+                    <Footer/>
                 </body>
             </html>
         </StrictMode>

@@ -10,7 +10,6 @@ export default function EnLayout({children}){
                 <GlobalNavBar/>
             </span>
             {children}
-            <Footer/>
         </div>
     )
 }

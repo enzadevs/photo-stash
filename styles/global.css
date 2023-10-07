@@ -47,6 +47,8 @@ body{
     --tiffany-mint-color: rgb(149,217,195);
     --yellow-color: rgb(255,177,0);
     background-color: var(--primary-bg-color);
+    display: flex;
+    flex-flow: column nowrap;
     color: var(--main-text-color);
     position: relative;
     min-height: 100vh;

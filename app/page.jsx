@@ -7,7 +7,6 @@ import SearchBox from 'components/Functions/SearchBox'
 import { Suspense } from 'react'
 import IndexLoading from './loading'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
-import Footer from 'components/Navigation/Footer'
 
 export default function HomePage(){
 
@@ -32,7 +31,6 @@ export default function HomePage(){
             <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedImages/>
             </Suspense>
-            <Footer/>
         </div>
     )
 }

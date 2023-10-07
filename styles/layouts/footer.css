@@ -1,9 +1,8 @@
 footer{
     background-color: var(--grey-color);
-    position: relative;
-    bottom: 0;
-    margin-top: 0.5em;
-    height: 175px;
+    margin-top: auto;
+    height: auto;
+    width: 100%;
 }
 
 .footer-div{
@@ -17,8 +16,8 @@ footer{
     justify-content: flex-start;
     gap: 1em;
     padding: 1em;
-    flex: 30%;
-    max-width: 33%;
+    flex: 50%;
+    max-width: 50%;
 }
 
 .footer-links-wrapper{
@@ -31,7 +30,13 @@ footer{
     color: var(--highlight-color);
 }
 
-.footer-icons{
-    height: 44px;
-    width: 44px;
+@media only screen and (max-width: 768px) {
+    footer{
+        font-size: 14px;
+    }
+
+    .footer-columns{
+        flex: 50%;
+        max-width: 100%;    
+    }
 }

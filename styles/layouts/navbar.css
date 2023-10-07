@@ -89,7 +89,7 @@ nav{
     color: var(--red-color);
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     #index-navbar{
         padding: 0 0.5em;
         height: 3em;
@@ -128,4 +128,4 @@ nav{
         height: 36px;
         width: 36px;
     }
-}
+} */

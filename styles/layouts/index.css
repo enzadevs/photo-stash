@@ -43,6 +43,7 @@
     columns: auto 3;
     gap: 0.75em;
     padding: 0 1em 1em 1em;
+    height: auto;
 }
 
 .curated-link-container{

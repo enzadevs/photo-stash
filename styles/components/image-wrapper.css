@@ -84,17 +84,17 @@
 
 @media only screen and (max-width: 1152px) {
     .photo-wrapper{
-        margin-bottom: 0.5em;
+        margin-bottom: 0.75em;
     }
 
     .top-right-buttons{
-        margin-right: 0.5em;
-        height: 6em;
+        margin-right: 0.75em;
+        height: 6.5em;
     }
 
     .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
-        height: 34px;
-        width: 34px;
+        height: 36px;
+        width: 36px;
     }
 
     .image-icons{
@@ -103,7 +103,7 @@
     }
 
     .bottom-container{
-        padding: 0 0.5em;
+        padding: 0 0.75em;
         height: 3em;
     }
 

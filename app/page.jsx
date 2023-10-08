@@ -32,14 +32,14 @@ export default function HomePage(){
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>
             <div className='index-min-height'>
-            <Suspense fallback={<IndexLoading/>}>
-                <IndexCuratedImages/>
-            </Suspense>
-            <span className='curated-link-container centre'>
-                <Link href='/en/curated' className='curated-button centre transition-fast radius-small'>
-                    More curated photos
-                </Link>
-            </span>
+                <Suspense fallback={<IndexLoading/>}>
+                    <IndexCuratedImages/>
+                </Suspense>
+                <span className='curated-link-container centre'>
+                    <Link href='/en/curated' className='curated-button centre transition-fast radius-small'>
+                        More curated photos
+                    </Link>
+                </span>
             </div>
         </div>
     )

@@ -1,6 +1,5 @@
 .index-page-container{
     position: relative;
-    /* margin-bottom: 1em; */
 }
 
 .index-top-container{
@@ -35,7 +34,9 @@
 }
 
 .index-min-height{
+    position: relative;
     min-height: 850px;
+    width: 100%;
 }
 
 .columns-container{

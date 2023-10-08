@@ -4,7 +4,7 @@ import ImageWrapper from '../ImageWrapper'
 
 export default async function IndexCuratedImages(){
     let currentPage = 0
-    let perPageImages = 23
+    let perPageImages = 24
     const curatedPhotos = await new Promise (resolve => setTimeout(resolve(getCuratedPhotos(currentPage,perPageImages)), 3000))
 
     return (
@@ -17,7 +17,6 @@ export default async function IndexCuratedImages(){
                         alt={photo.alt}
                         photographer={photo.photographer}
                         photostash_url={undefined}
-                        quality={50}
                     />
                 )
             })}

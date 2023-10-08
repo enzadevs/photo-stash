@@ -70,6 +70,7 @@
 .photographer-name{
     color: white;
     margin-left: 0.5em;
+    text-overflow: ellipsis;
 }
 
 .profile-icon-wrapper{
@@ -109,5 +110,11 @@
 
     .photographer-name{
         margin-left: 0.25em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .photographer-name{
+        font-size: 14px;
     }
 }

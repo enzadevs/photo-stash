@@ -1,5 +1,6 @@
 import 'styles/layouts/index.css'
 import 'styles/animations/image-transition.css'
+import Link from 'next/link'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
@@ -34,6 +35,11 @@ export default function HomePage(){
             <Suspense fallback={<IndexLoading/>}>
                 <IndexCuratedImages/>
             </Suspense>
+            <span className='curated-link-container centre'>
+                <Link href='/en/curated' className='curated-button centre transition-fast radius-small'>
+                    More curated photos
+                </Link>
+            </span>
             </div>
         </div>
     )

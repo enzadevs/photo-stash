@@ -1,10 +1,13 @@
 'use client'
 
 import 'styles/components/searchbox.css'
+import Link from 'next/link'
 import { BsSearch } from 'react-icons/bs'
+import { useRouter } from 'next/navigation'
 import { useResultsStore } from 'components/Containers/QueryResults'
 
 export default function SearchBox({className}){
+    const router = useRouter()
     const queryText = useResultsStore(state => state.queryText)
     const updateQueryText = useResultsStore(state => state.updateQueryText)
     const updateResultsArray = useResultsStore(state => state.updateResultsArray)
@@ -20,17 +23,18 @@ export default function SearchBox({className}){
                 onChange={e => updateQueryText(e.currentTarget.value)}    
                 onKeyUp={(e) =>{
                     if(e.key === 'Enter'){
+                        router.push('/en/search')
                         updateResultsArray()
                     } else return
                 }}
             ></input>
-            <span
+            <Link
                 href='/en/search' 
                 className='search-icon-wrapper radius-small centre transition-fast'
                 onClick={()=>{
                     updateResultsArray()
                 }}
-            ><BsSearch className='icons'/></span>
+            ><BsSearch className='icons'/></Link>
         </span>
     )
 }

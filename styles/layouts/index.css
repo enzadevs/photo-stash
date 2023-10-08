@@ -23,6 +23,12 @@
     width: 100%;
 }
 
+.index-searchbox{
+    position: relative;
+    height: 40px;
+    width: 30em;
+}
+
 .curated-txt{
     font-size: 1.25em;
     padding: 0.5em 0.3em 0.5em 0.25em;
@@ -45,8 +51,18 @@
         padding: 0 5px;
     }
 
+    .index-searchbox{
+        height: 36px;
+    }
+
     .curated-txt{
         font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .index-searchbox{
+        width: 24em;
     }
 }
 
@@ -55,5 +71,9 @@
         columns: auto 1;
         gap: 5px;
         padding: 0 5px;
+    }
+
+    .index-searchbox{
+        width: 18em;
     }
 }

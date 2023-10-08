@@ -69,17 +69,28 @@ nav{
     width: 9em;
 }
 
+.short-global-logo{
+    border: var(--border-ultra-thin);
+    padding-right: 5px;
+    height: 36px;
+    width: auto;
+}
+
+.p-letter{
+    padding: 0 5px;
+}
+
 .global-searchbox-wrapper{
     flex-grow: 1;
 }
 
 .global-searchbox{
     position: relative;
-    height: 36px;
+    height: 40px;
     width: 30em;
 }
 
-.global-header-link:hover{
+.global-header-link:hover, .short-global-logo:hover{
     border: var(--border-thin);
     border-color: var(--highlight-color);
 }
@@ -111,18 +122,9 @@ nav{
         width: 36px;
     }
 
-    #global-navbar{
-        padding: 0 5px;
-    }
-
-    .global-header-link{
-        font-size: 10px;
-        padding: 0 0.25em;
-        height: 36px;
-    }
-
     .global-searchbox{
-        padding: 0 0.25em;
+        margin: 0 2em;
+        height: 36px;
         width: 100%;
     }
 
@@ -136,4 +138,14 @@ nav{
         width: 18px;
     }
     
+}
+
+@media only screen and (max-width: 480px) {
+    #global-navbar{
+        padding: 0 0.5em;
+    }
+
+    .global-searchbox{
+        margin: 0 7px;
+    }
 }

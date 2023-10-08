@@ -24,7 +24,9 @@ export default function HomePage(){
                 ></Image>
                 <IndexNavBar/>
                 <div className='index-searchbox-container margin-auto-1440 centre'>
-                    <SearchBox/>
+                    <SearchBox
+                        className='index-searchbox'
+                    />
                 </div>
             </span>
             <p className='curated-txt margin-auto-1440'>Curated photos of day</p>

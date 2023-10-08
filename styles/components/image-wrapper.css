@@ -3,6 +3,7 @@
     flex-flow: column nowrap;
     position: relative; 
     margin-bottom: 1em;
+    min-height: 125px;
 }
 
 .custom-image-component{

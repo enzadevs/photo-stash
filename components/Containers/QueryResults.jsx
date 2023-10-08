@@ -19,6 +19,5 @@ export const useResultsStore = create((set,get)=>({
         )
         const data = await response.json()
         set({resultsArray: data.photos})
-        console.log((get().queryText))
     }
 }))

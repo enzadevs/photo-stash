@@ -14,7 +14,31 @@
 }
 
 .results-wrapper{
-    columns: 360px 3;
-    gap: 1em;
-    padding: 0 1em;
+    border-bottom: var(--border-ultra-thin);
+    columns: auto 3;
+    gap: 0.75em;
+    padding: 1em;
+    min-height: 700px;
+}
+
+.search-page-bottom-nav-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0 0 0;
+    padding: 0 3em;
+    height: 40px;
+    width: 100%;
+}
+
+.nav-buttons{
+    background-color: var(--grey-color);
+    border: var(--border-ultra-thin);
+    height: 100%;
+    width: 5em;
+}
+
+.nav-buttons:hover{
+    background-color: var(--highlight-color);
+    color: white;
 }

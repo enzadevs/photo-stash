@@ -89,7 +89,7 @@
 
     .top-right-buttons{
         margin-right: 0.5em;
-        height: 5.25em;
+        height: 6em;
     }
 
     .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
@@ -111,34 +111,3 @@
         margin-left: 0.25em;
     }
 }
-
-/* @media only screen and (max-width: 572px) {
-    .photo-wrapper{
-        margin-bottom: 5px;
-    }
-
-    .top-right-buttons{
-        margin-right: 0.25em;
-        height: 4.25em;
-    }
-
-    .image-icons-wrapper, .heart-icon-wrapper,.profile-icon-wrapper, .download-icon-wrapper{
-        height: 30px;
-        width: 30px;
-    }
-
-    .image-icons{
-        height: 16px;
-        width: 16px;
-    }
-
-    .bottom-container{
-        padding: 0 0.25em;
-        height: 2.5em;
-    }
-
-    .photographer-name{
-        font-size: 14px;
-        margin-left: 5px;
-    }
-} */

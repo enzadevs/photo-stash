@@ -19,7 +19,7 @@ nav{
     border: 1px solid rgba(256,256,256, 0.3);
     color: white;
     height: 40px;
-    width: 10em;
+    width: 9em;
 }
 
 .company-header-link:hover{
@@ -32,31 +32,6 @@ nav{
     background-color: var(--highlight-darker-color);
     border-radius: var(--border-radius-small);
     padding: 0 0.25em;
-}
-
-#global-navbar{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    position: relative;
-    padding: 0 1em;
-    height: 4em;
-    width: 100%;
-}
-
-.global-header-link{
-    border: var(--border-ultra-thin);
-    height: 40px;
-    width: 10em;
-}
-
-.global-searchbox-wrapper{
-    flex-grow: 1;
-}
-
-.global-header-link:hover{
-    border: var(--border-thin);
-    border-color: var(--highlight-color);
 }
 
 .heart-icon{
@@ -75,6 +50,38 @@ nav{
     border: var(--border-thin);
     border-color: white; 
     color: var(--red-color);
+}
+
+#global-navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1em;
+    height: 4em;
+    width: 100%;
+}
+
+.global-header-link{
+    border: var(--border-ultra-thin);
+    height: 40px;
+    width: 9em;
+}
+
+.global-searchbox-wrapper{
+    flex-grow: 1;
+}
+
+.global-searchbox{
+    position: relative;
+    height: 36px;
+    width: 30em;
+}
+
+.global-header-link:hover{
+    border: var(--border-thin);
+    border-color: var(--highlight-color);
 }
 
 .global-heart-wrapper{
@@ -96,14 +103,37 @@ nav{
 
     .company-header-link{
         font-size: 14px;
+        height: 36px;
+    }
+
+    .index-heart-wrapper{
+        height: 36px;
+        width: 36px;
     }
 
     #global-navbar{
-        padding: 0 0.5em;
+        padding: 0 5px;
+    }
+
+    .global-header-link{
+        font-size: 10px;
+        padding: 0 0.25em;
+        height: 36px;
+    }
+
+    .global-searchbox{
+        padding: 0 0.25em;
+        width: 100%;
+    }
+
+    .global-heart-wrapper{
+        height: 36px;
+        width: 36px;
     }
 
     .heart-icon{
         height: 18px;
         width: 18px;
     }
+    
 }

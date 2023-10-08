@@ -38,7 +38,29 @@
     width: 5em;
 }
 
-.nav-buttons:hover{
+.nav-buttons:hover, .load-more-btn:hover{
     background-color: var(--highlight-color);
     color: white;
+}
+
+/* * Curated Photos Page */
+.curated-photos-wrapper{
+    border-bottom: var(--border-ultra-thin);
+    columns: auto 3;
+    gap: 0.75em;
+    padding: 0 1em 1em 1em;
+    height: auto;
+}
+
+.load-more-container{
+    margin: 0.5em 0;
+    height: 40px;
+    width: 100%;
+}
+
+.load-more-btn{
+    background-color: var(--grey-color);
+    border: var(--border-ultra-thin);
+    height: 100%;
+    width: 7em;
 }

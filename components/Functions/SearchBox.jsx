@@ -9,6 +9,7 @@ export default function SearchBox({className}){
     const router = useRouter()
     const queryText = useResultsStore(state => state.queryText)
     const updateQueryText = useResultsStore(state => state.updateQueryText)
+    const clearInputArea = useResultsStore(state => state.clearInputArea)
     const updateResultsArray = useResultsStore(state => state.updateResultsArray)
 
     return (
@@ -24,6 +25,7 @@ export default function SearchBox({className}){
                     if(e.key === 'Enter' && queryText !== ''){
                         router.push('/en/search')
                         updateResultsArray()
+                        clearInputArea()
                     } else return
                 }}
             ></input>
@@ -35,6 +37,7 @@ export default function SearchBox({className}){
                     } else {
                         router.push('/en/search')
                         updateResultsArray()
+                        clearInputArea()
                     }
                 }}
             ><BsSearch className='icons'/></span>

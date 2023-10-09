@@ -7,6 +7,7 @@ export const useResultsStore = create((set,get)=>({
     perPageImages: 24,
     resultsArray: [],
     updateQueryText: queryText => set(() => ({queryText: queryText})),
+    clearInputArea: () => set(() => ({queryText: ''})),
     updateCurrentPage: currentPage => set(() => ({currentPage: currentPage})),
     updatePerPageImages: perPageImages => set(() => ({perPageImages: perPageImages})),
     updateResultsArray: async() => {

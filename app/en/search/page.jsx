@@ -25,7 +25,7 @@ export default function SearchResults(){
     
     function EmptySearch(){
         return(
-            <h2 className='centre'>Please type some words in search box 😉</h2>
+            <p className='centre'>Please type some words in search box.</p>
         )
     }
 

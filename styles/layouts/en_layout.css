@@ -9,7 +9,9 @@
 
 .search-results-container{
     margin: 1em auto;
-    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 500px;
     max-width: 1440px;
 }
 
@@ -32,7 +34,7 @@
 }
 
 .nav-buttons{
-    background-color: var(--grey-color);
+    background-color: white;
     border: var(--border-ultra-thin);
     height: 100%;
     width: 5em;
@@ -40,7 +42,6 @@
 
 .nav-buttons:hover, .load-more-btn:hover{
     background-color: var(--highlight-color);
-    color: white;
 }
 
 /* * Curated Photos Page */

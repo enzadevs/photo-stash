@@ -37,9 +37,8 @@ export default function SearchResults(){
         }
     }
 
-    return (
-        <div className='search-results-container'>
-            <Results/>
+    function BottomNavButtons(){
+        return(
             <div className='search-page-bottom-nav-buttons'>
                 <button className='nav-buttons transition radius-small'>
                     Prev
@@ -48,6 +47,13 @@ export default function SearchResults(){
                     Next
                 </button>
             </div>
+        )
+    }
+
+    return (
+        <div className='search-results-container'>
+            <Results/>
+            {resultsArray.length === 0 ? '' : <BottomNavButtons/>}
         </div>
     )
 }

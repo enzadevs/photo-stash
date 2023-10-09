@@ -3,12 +3,15 @@ import { useState,useEffect } from 'react'
 import Image from 'next/image'
 import ErrorImage from 'public/images/actions/error_pink.jpg'
 
-export default async function CustomImage({src,alt,quality=80}){
+export default async function CustomImage({src,alt,quality=75}){
     const [ imgSource,setImgSource ] = useState(src)
 
     useEffect(()=>{
         setImgSource(src)
     },[src])
+
+    // const randomLoadTime = Math.floor(Math.random() * 5 + 5) * 1000
+    // await new Promise ((resolve) => setTimeout(resolve, randomLoadTime))
 
     return (
         <Image

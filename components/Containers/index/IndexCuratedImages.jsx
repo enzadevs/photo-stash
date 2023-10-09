@@ -2,7 +2,7 @@
 
 import { v4 as uuidv4 } from 'uuid'
 import { useEffect } from 'react'
-import { useCuratedPhotosStore } from 'components/Containers/CuratedPhotosStore'
+import { useCuratedPhotosStore } from 'global_states/CuratedPhotosStore'
 import ImageWrapper from '../ImageWrapper'
 
 export default async function IndexCuratedImages(){

@@ -3,7 +3,7 @@
 import 'styles/components/searchbox.css'
 import { BsSearch } from 'react-icons/bs'
 import { useRouter } from 'next/navigation'
-import { useResultsStore } from 'components/Containers/QueryResults'
+import { useResultsStore } from 'global_states/QueryResults'
 
 export default function SearchBox({className}){
     const router = useRouter()

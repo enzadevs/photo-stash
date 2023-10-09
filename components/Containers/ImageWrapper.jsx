@@ -1,30 +1,13 @@
 'use client'
-export const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
-import { lazy } from 'react'
+import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
 import { Suspense } from 'react'
-import 'styles/components/image-wrapper.css'
-import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 import ImageLoading from 'components/Functions/ImageLoading'
-const CustomImage = lazy(() => import('/components/Containers/CustomImage.jsx'))
+import CustomImage from './CustomImage'
+import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
 export default function ImageWrapper({src,alt,photographer,quality,photostash_url}){
-    function downloadImage() {
-        const imageFile = fetch(src,
-            {
-                method: 'GET'
-            },
-            {
-                headers: {
-                  Authorization: API_KEY,
-                },
-            }
-        )
-        const photo = imageFile
-        return photo
-    } 
-
     return (
         <div className='photo-wrapper radius-small'>
             <Suspense fallback={<ImageLoading/>}>
@@ -50,9 +33,9 @@ export default function ImageWrapper({src,alt,photographer,quality,photostash_ur
                         <BiSolidUser className='image-icons'/>
                     </span>
                     <p className='photographer-name'>{photographer}</p>
-                    <span className='download-icon-wrapper radius-small transition-fast centre'>
-                        <BiDownload className='image-icons'/>
-                    </span>
+                    <span
+                        className='download-icon-wrapper radius-small transition-fast centre'
+                    ><BiDownload className='image-icons'/></span>
                 </div>
             </span>
         </div>

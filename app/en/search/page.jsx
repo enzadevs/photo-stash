@@ -1,7 +1,7 @@
 'use client'
 
 import ImageWrapper from 'components/Containers/ImageWrapper'
-import { useResultsStore } from 'components/Containers/QueryResults'
+import { useResultsStore } from 'global_states/QueryResults'
 
 export default function SearchResults(){
     const resultsArray = useResultsStore((state) => state.resultsArray)

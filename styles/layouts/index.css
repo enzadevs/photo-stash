@@ -79,7 +79,8 @@
     }
 
     .curated-txt{
-        font-size: 1em;
+        font-size: 18px;
+        padding: 0.5em 10px 0.5em 10px;
     }
 }
 
@@ -97,5 +98,11 @@
 
     .index-searchbox{
         width: 18em;
+    }
+
+    .curated-button{
+        text-align: center;
+        font-size: 15px;
+        width: 8em;
     }
 }

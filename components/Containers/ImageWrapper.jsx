@@ -1,4 +1,5 @@
 'use client'
+export const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
 import { lazy } from 'react'
 import Link from 'next/link'
@@ -9,6 +10,21 @@ import ImageLoading from 'components/Functions/ImageLoading'
 const CustomImage = lazy(() => import('/components/Containers/CustomImage.jsx'))
 
 export default function ImageWrapper({src,alt,photographer,quality,photostash_url}){
+    function downloadImage() {
+        const imageFile = fetch(src,
+            {
+                method: 'GET'
+            },
+            {
+                headers: {
+                  Authorization: API_KEY,
+                },
+            }
+        )
+        const photo = imageFile
+        return photo
+    } 
+
     return (
         <div className='photo-wrapper radius-small'>
             <Suspense fallback={<ImageLoading/>}>

@@ -1,15 +1,21 @@
-import { getCuratedPhotos } from 'configs/pexels_config'
+'use client'
+
 import { v4 as uuidv4 } from 'uuid'
+import { useEffect } from 'react'
+import { useCuratedPhotosStore } from 'components/Containers/CuratedPhotosStore'
 import ImageWrapper from '../ImageWrapper'
 
 export default async function IndexCuratedImages(){
-    let currentPage = 0
-    let perPageImages = 24
-    const curatedPhotos = await new Promise (resolve => setTimeout(resolve(getCuratedPhotos(currentPage,perPageImages)), 3000))
+    const curatedPhotosArray = useCuratedPhotosStore(state => state.curatedPhotosArray)
+    const minCuratedPhotos = useCuratedPhotosStore(state => state.minCuratedPhotos)
+
+    useEffect(() =>{
+        minCuratedPhotos()
+    }, [])
 
     return (
         <div className='columns-container margin-auto-1440'>
-            {curatedPhotos?.map( photo =>{
+            {curatedPhotosArray?.map( photo =>{
                 return(
                     <ImageWrapper
                         key={uuidv4()}
@@ -17,6 +23,7 @@ export default async function IndexCuratedImages(){
                         alt={photo.alt}
                         photographer={photo.photographer}
                         photostash_url={undefined}
+                        quality={75}
                     />
                 )
             })}

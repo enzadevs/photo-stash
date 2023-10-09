@@ -44,24 +44,25 @@
     background-color: var(--highlight-color);
 }
 
-/* * Curated Photos Page */
 .curated-photos-wrapper{
     border-bottom: var(--border-ultra-thin);
     columns: auto 3;
     gap: 0.75em;
-    padding: 0 1em 1em 1em;
+    padding: 1em;
     height: auto;
 }
 
-.load-more-container{
-    margin: 0.5em 0;
-    height: 40px;
-    width: 100%;
+@media only screen and (max-width: 896px) {
+    .curated-photos-wrapper{
+        columns: auto 2;
+        gap: 10px;
+        padding: 0 10px 10px 10px;
+    }
 }
 
-.load-more-btn{
-    background-color: var(--grey-color);
-    border: var(--border-ultra-thin);
-    height: 100%;
-    width: 7em;
+@media only screen and (max-width: 480px) {
+    .curated-photos-wrapper{
+        columns: auto 1;
+        gap: 5px;
+    }
 }

@@ -33,11 +33,9 @@ export default function ImageWrapper({src,alt,photographer,quality,originalImg,p
                         <BiSolidUser className='image-icons'/>
                     </span>
                     <p className='photographer-name'>{photographer}</p>
-                    <a
-                        href={originalImg}
-                        download={alt}
+                    <span
                         className='next-link download-icon-wrapper radius-small transition-fast centre'
-                    ><BiDownload className='image-icons'/></a>
+                    ><BiDownload className='image-icons'/></span>
                 </div>
             </span>
         </div>

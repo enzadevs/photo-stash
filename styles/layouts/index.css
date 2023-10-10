@@ -44,7 +44,7 @@
     columns: auto 3;
     gap: 0.75em;
     padding: 0 1em 1em 1em;
-    height: auto;
+    min-height: 700px;
 }
 
 .curated-link-container{
@@ -72,6 +72,7 @@
         columns: auto 2;
         gap: 10px;
         padding: 0 10px 10px 10px;
+        min-height: 500px;
     }
 
     .index-searchbox{

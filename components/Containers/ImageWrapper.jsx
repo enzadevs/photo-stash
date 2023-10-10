@@ -7,7 +7,7 @@ import ImageLoading from 'components/Functions/ImageLoading'
 import CustomImage from './CustomImage'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
-export default function ImageWrapper({src,alt,photographer,quality,photostash_url}){
+export default function ImageWrapper({src,alt,photographer,quality,originalImg,photostash_url}){
     return (
         <div className='photo-wrapper radius-small'>
             <Suspense fallback={<ImageLoading/>}>
@@ -33,9 +33,11 @@ export default function ImageWrapper({src,alt,photographer,quality,photostash_ur
                         <BiSolidUser className='image-icons'/>
                     </span>
                     <p className='photographer-name'>{photographer}</p>
-                    <span
-                        className='download-icon-wrapper radius-small transition-fast centre'
-                    ><BiDownload className='image-icons'/></span>
+                    <a
+                        href={originalImg}
+                        download={alt}
+                        className='next-link download-icon-wrapper radius-small transition-fast centre'
+                    ><BiDownload className='image-icons'/></a>
                 </div>
             </span>
         </div>

@@ -44,24 +44,35 @@
     background-color: var(--highlight-color);
 }
 
-.curated-photos-wrapper{
+.curated-photos-wrapper, .favourites-wrapper{
     border-bottom: var(--border-ultra-thin);
     columns: auto 3;
     gap: 0.75em;
     padding: 1em;
-    height: auto;
+}
+
+.favourites-page{
+    min-height: 750px;
+}
+
+.favourites-wrapper{
+    border: none;
 }
 
 @media only screen and (max-width: 896px) {
-    .curated-photos-wrapper{
+    .curated-photos-wrapper, .favourites-wrapper{
         columns: auto 2;
         gap: 10px;
         padding: 0 10px 10px 10px;
     }
+
+    .favourites-page{
+        min-height: 500px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    .curated-photos-wrapper{
+    .curated-photos-wrapper, .favourites-wrapper{
         columns: auto 1;
         gap: 5px;
     }

@@ -16,6 +16,7 @@ export default function SearchResults(){
                             alt={photo.alt}
                             photographer={photo.photographer}
                             photostash_url={undefined}
+                            originalImg={photo.src.original}
                         />
                     )
                 })}

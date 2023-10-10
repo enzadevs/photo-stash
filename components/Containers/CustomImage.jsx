@@ -1,3 +1,5 @@
+'use client'
+
 import 'styles/animations/image-transition.css'
 import { useState,useEffect } from 'react'
 import Image from 'next/image'

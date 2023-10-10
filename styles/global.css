@@ -66,8 +66,8 @@ body{
 }
 
 @font-face {
-    font-family: lato;
-    src: url(../public/fonts/lato_regular.ttf);
+    font-family: sspro;
+    src: url(../public/fonts/sspro_regular.ttf);
 }
 
 input{

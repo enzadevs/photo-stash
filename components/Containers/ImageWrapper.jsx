@@ -2,14 +2,17 @@
 
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Suspense } from 'react'
 import ImageLoading from 'components/Functions/ImageLoading'
 import CustomImage from './CustomImage'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
 export default function ImageWrapper({src,alt,photographer,quality,originalImg,photostash_url}){
+    const router = useRouter()
+
     return (
-        <div className='photo-wrapper radius-small'>
+        <div className='photo-wrapper radius-small' >
             <Suspense fallback={<ImageLoading/>}>
                 <CustomImage
                     src={src}
@@ -23,7 +26,7 @@ export default function ImageWrapper({src,alt,photographer,quality,originalImg,p
                         <BiSolidHeart className='image-icons'/>
                     </span>
                     <Link 
-                        href={src}
+                        href={`/en/photo/${photostash_url}`}
                         className='next-link image-icons-wrapper radius-small transition-fast centre'>
                         <BiLinkExternal className='image-icons'/>
                     </Link>

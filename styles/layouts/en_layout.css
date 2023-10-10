@@ -60,7 +60,7 @@
 }
 
 @media only screen and (max-width: 896px) {
-    .curated-photos-wrapper, .favourites-wrapper{
+    .curated-photos-wrapper, .favourites-wrapper,.results-wrapper{
         columns: auto 2;
         gap: 10px;
         padding: 0 10px 10px 10px;
@@ -72,7 +72,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .curated-photos-wrapper, .favourites-wrapper{
+    .curated-photos-wrapper, .favourites-wrapper,.results-wrapper{
         columns: auto 1;
         gap: 5px;
     }

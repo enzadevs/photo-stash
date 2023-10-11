@@ -19,7 +19,7 @@ export const favouritePhotosStore = create (
     )
 )
 
-export default function FavouritesPage(){
+export default function FavouritesPage() {
     const favouritePhotosArray = favouritePhotosStore(state => state.favouritePhotosArray)
 
     function FavPhotosArray(){
@@ -45,7 +45,7 @@ export default function FavouritesPage(){
     }
 
     return (
-        <div className='favourites-page margin-auto-1440'>
+        <div className='favourites-page margin-auto-1440' suppressHydrationWarning>
             {favouritePhotosArray.length <= 0 ? <NoLikedPhotos/> : <FavPhotosArray/>}
         </div>
     )

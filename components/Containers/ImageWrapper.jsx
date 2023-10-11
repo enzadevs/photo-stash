@@ -1,15 +1,18 @@
 'use client'
 
 import 'styles/components/image-wrapper.css'
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { Suspense } from 'react'
 import ImageLoading from 'components/Functions/ImageLoading'
 import CustomImage from './CustomImage'
+import { favouritePhotosStore } from 'app/en/favourites/page'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
-export default function ImageWrapper({src,alt,photographer,quality,originalImg,photostash_url}){
+export default function ImageWrapper({photoObj,src,alt,photographer,quality,originalImg,photostash_url}){
     const router = useRouter()
+    const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)
+    const addPhotoToLiked = favouritePhotosStore(state => state.addPhotoToLiked)
 
     return (
         <div className='photo-wrapper radius-small' >
@@ -22,7 +25,12 @@ export default function ImageWrapper({src,alt,photographer,quality,originalImg,p
             </Suspense>
             <span className='image-buttons hw100 transition-fast radius-small'>
                 <div className='top-right-buttons'>
-                    <span className='heart-icon-wrapper radius-small transition-fast centre'>
+                    <span 
+                        onClick={()=>{
+                            updatePhotoObject(photoObj)
+                            addPhotoToLiked()
+                        }}
+                        className='heart-icon-wrapper radius-small transition-fast centre'>
                         <BiSolidHeart className='image-icons'/>
                     </span>
                     <Link 

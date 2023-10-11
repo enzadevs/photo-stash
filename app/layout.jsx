@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'NextJS',
-    description: 'App',
+    title: 'Photo Stash',
+    description: 'Search and download free stock images from Pexels',
     name: 'viewport', 
     content:'width=device-width, initial-scale=1',
 }

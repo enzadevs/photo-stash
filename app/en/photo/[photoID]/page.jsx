@@ -1,6 +1,6 @@
 const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
-import CustomImage from "components/Containers/CustomImage"
+import CustomImage from 'components/Containers/CustomImage'
 
 export async function generateMetadata({params}) {
     let id = params.photoID
@@ -19,7 +19,6 @@ export async function generateMetadata({params}) {
         params: photo.id
     }
 }
-
 
 export default async function PhotoPage({params}){
     let id = params.photoID

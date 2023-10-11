@@ -10,11 +10,8 @@ export default function Footer(){
                         Terms & policies
                     </h4>
                     <span className='footer-links-wrapper'>
-                        <Link href='/en/terms&policies' className='next-link footer-links transition-fast'>
+                        <Link href='/en/terms' className='next-link footer-links transition-fast'>
                             Terms of usage
-                        </Link>
-                        <Link href='/en/terms&policies' className='next-link footer-links transition-fast'>
-                            Policies
                         </Link>
                     </span>
                 </span>

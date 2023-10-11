@@ -60,6 +60,31 @@
     border: none;
 }
 
+.terms-and-policies-page{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 750px;
+}
+
+.term-links{
+    color: var(--highlight-color);
+}
+
+.terms-header{
+    margin: 1em;
+}
+
+.terms-container{
+    background-color: var(--grey-color);
+    padding: 1em;
+    width: 300px;
+}
+
+li{
+    list-style: decimal;
+    margin: 0.5em;
+}
+
 @media only screen and (max-width: 896px) {
     .curated-photos-wrapper, .favourites-wrapper,.results-wrapper{
         columns: auto 2;
@@ -68,6 +93,10 @@
     }
 
     .favourites-page{
+        min-height: 500px;
+    }
+
+    .terms-and-policies-page{
         min-height: 500px;
     }
 }

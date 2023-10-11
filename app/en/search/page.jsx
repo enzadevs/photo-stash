@@ -1,5 +1,6 @@
 'use client'
 
+import { v4 as uuidv4 } from 'uuid'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 import { useResultsStore } from 'global_states/QueryResults'
 
@@ -12,11 +13,13 @@ export default function SearchResults(){
                 {resultsArray.map(photo=>{
                     return(
                         <ImageWrapper
+                            key={uuidv4()}
+                            photoObj={photo}
                             src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                             alt={photo.alt}
                             photographer={photo.photographer}
-                            photostash_url={undefined}
                             originalImg={photo.src.original}
+                            quality={75}
                         />
                     )
                 })}

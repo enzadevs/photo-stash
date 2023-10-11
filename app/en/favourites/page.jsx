@@ -2,6 +2,7 @@
 
 import { create } from 'zustand'
 import { persist,createJSONStorage } from 'zustand/middleware'
+import ImageWrapper from 'components/Containers/ImageWrapper'
 
 export const favouritePhotosStore = create (
     persist(
@@ -19,14 +20,33 @@ export const favouritePhotosStore = create (
 )
 
 export default function FavouritesPage(){
-    const favouritePhotos = favouritePhotosStore(state => state.favouritePhotos)
+    const favouritePhotosArray = favouritePhotosStore(state => state.favouritePhotosArray)
 
+    function FavPhotosArray(){
+        return(
+            <div className='favourites-wrapper'>
+                {favouritePhotosArray?.map(photo =>{
+                    return(
+                        <ImageWrapper
+                            src={photo.src.large2x}
+                            alt={photo.alt}
+                            photographer={photo.photographer}
+                            photostash_url={photo.id}
+                            quality={75}
+                        />
+                    )
+                })}
+            </div>
+        )
+    }
+
+    function NoLikedPhotos(){
+        return <p className='centre'>Please like some photos to see them here</p>
+    }
 
     return (
         <div className='favourites-page margin-auto-1440'>
-            <div className='favourites-wrapper'>
-                
-            </div>
+            {favouritePhotosArray.length <= 0 ? <NoLikedPhotos/> : <FavPhotosArray/>}
         </div>
     )
 }

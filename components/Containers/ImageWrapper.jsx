@@ -1,28 +1,30 @@
 'use client'
 
 import 'styles/components/image-wrapper.css'
-import { Suspense } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import ImageLoading from 'components/Functions/ImageLoading'
-import CustomImage from './CustomImage'
 import { favouritePhotosStore } from 'app/en/favourites/page'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
+const CustomImage = dynamic(
+    () => import('./CustomImage'),
+    {
+        loading: () => <p className='centre'>Loading...</p>
+    }
+)
+
 export default function ImageWrapper({photoObj,src,alt,photographer,quality,originalImg,photostash_url}){
-    const router = useRouter()
     const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)
     const addPhotoToLiked = favouritePhotosStore(state => state.addPhotoToLiked)
 
     return (
         <div className='photo-wrapper radius-small' >
-            <Suspense fallback={<ImageLoading/>}>
-                <CustomImage
-                    src={src}
-                    alt={alt}
-                    quality={quality}
-                />
-            </Suspense>
+            <CustomImage
+                src={src}
+                alt={alt}
+                quality={quality}
+            />
             <span className='image-buttons hw100 transition-fast radius-small'>
                 <div className='top-right-buttons'>
                     <span 

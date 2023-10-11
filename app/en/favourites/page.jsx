@@ -10,7 +10,13 @@ export const favouritePhotosStore = create (
             photoObject: 0,
             updatePhotoObject: photoObject => set(() => ({photoObject: photoObject})) ,
             favouritePhotosArray: [],
-            addPhotoToLiked: () => set({favouritePhotos: get().favouritePhotosArray.push(get().photoObject)})
+            addPhotoToLiked: () =>{
+                if(get().favouritePhotosArray.includes(get().photoObject)){
+                    alert('You already added this photo to favourites')
+                } else {
+                    set({favouritePhotos: get().favouritePhotosArray.push(get().photoObject)})
+                }
+            }
         }),
         {
             name: 'favourite-photos',

@@ -3,8 +3,8 @@
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import ImageLoading from 'components/Functions/ImageLoading'
 import { favouritePhotosStore } from 'app/en/favourites/page'
+import JsFileDownloader from 'js-file-downloader'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 
 const CustomImage = dynamic(
@@ -47,6 +47,16 @@ export default function ImageWrapper({photoObj,src,alt,photographer,quality,orig
                     </span>
                     <p className='photographer-name'>{photographer}</p>
                     <span
+                        onClick={()=>{
+                            new JsFileDownloader({
+                                url: originalImg + `?height=1440&width=2048`,
+                                nameCallback: function() {
+                                    return alt + '.jpg'
+                                },
+                                timeout: 75000,
+                                forceDesktopMode: true
+                            })
+                        }}
                         className='next-link download-icon-wrapper radius-small transition-fast centre'
                     ><BiDownload className='image-icons'/></span>
                 </div>

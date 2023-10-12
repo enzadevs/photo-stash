@@ -90,10 +90,6 @@
     margin-left: auto;
 }
 
-.loading-element{
-    min-height: 500px;
-}
-
 @media only screen and (max-width: 1152px) {
     .photo-wrapper{
         margin-bottom: 0.75em;

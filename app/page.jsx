@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-kerala-india.jpg'
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
+import IndexLoading from 'components/Functions/IndexLoading'
 import SearchBox from 'components/Functions/SearchBox'
 import { Suspense } from 'react'
-import IndexLoading from 'components/Functions/IndexLoading'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
 
 export default function HomePage(){

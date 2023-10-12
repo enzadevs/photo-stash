@@ -33,31 +33,9 @@ export default function SearchResults(){
         )
     }
 
-    function Results(){
-        if (resultsArray.length <= 0){
-            return <EmptySearch/>
-        } else {
-            return <ResultsWrapper/>
-        }
-    }
-
-    function BottomNavButtons(){
-        return(
-            <div className='search-page-bottom-nav-buttons'>
-                <button className='nav-buttons transition radius-small'>
-                    Prev
-                </button>
-                <button className='nav-buttons transition radius-small'>
-                    Next
-                </button>
-            </div>
-        )
-    }
-
     return (
         <div className='search-results-container'>
-            <Results/>
-            {resultsArray.length === 0 ? '' : <BottomNavButtons/>}
+            {resultsArray.length <= 0 ? <EmptySearch/> : <ResultsWrapper/>}
         </div>
     )
 }

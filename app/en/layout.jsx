@@ -1,6 +1,5 @@
 import 'styles/layouts/en_layout.css'
 import GlobalNavBar from 'components/Containers/en/GlobalNavBar'
-import Footer from 'components/Navigation/Footer'
 
 export default function EnLayout({children}){
 

@@ -32,11 +32,17 @@ export default async function PhotoPage({params}){
         .then ((res) => res.json())
 
     return (
-        <img
-            src={photo.src.original}
-            alt={photo.alt}
-            className='heyo'
-        />
+        <div className='photo-page-container margin-auto-1440 centre'>
+            <span className='photo-wrapper'>
+                <CustomImage
+                    src={photo.src.large2x}
+                    alt={photo.alt}
+                />
+            </span>
+            <span className='photo-functions-container'>
+                buttons!
+            </span>
+        </div>
         
     )
 }

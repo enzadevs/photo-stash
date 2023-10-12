@@ -3,7 +3,7 @@
 import 'styles/animations/image-transition.css'
 import { useState,useEffect } from 'react'
 import Image from 'next/image'
-import ErrorImage from 'public/images/actions/error_pink.jpg'
+import ErrorImage from 'public/images/actions/error_image.jpg'
 
 export default async function CustomImage({src,alt,quality=75}){
     const [ imgSource,setImgSource ] = useState(src)

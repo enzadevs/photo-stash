@@ -2,17 +2,10 @@
 
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { favouritePhotosStore } from 'app/en/favourites/page'
+import CustomImage from './CustomImage'
 import JsFileDownloader from 'js-file-downloader'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
-
-const CustomImage = dynamic(
-    () => import('./CustomImage'),
-    {
-        loading: () => <p className='centre'>Loading...</p>
-    }
-)
 
 export default function ImageWrapper({photoObj,src,alt,photographer,quality,originalImg,photostash_url}){
     const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)

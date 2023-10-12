@@ -6,6 +6,11 @@
     min-height: 125px;
 }
 
+.custom-image-parent{
+    position: relative;
+    height: 100%; 
+}
+
 .custom-image-component{
     position: relative;
     opacity: 1;
@@ -83,6 +88,10 @@
 
 .download-icon-wrapper{
     margin-left: auto;
+}
+
+.loading-element{
+    min-height: 500px;
 }
 
 @media only screen and (max-width: 1152px) {

@@ -12,9 +12,6 @@ export default async function CustomImage({src,alt,quality=75}){
         setImgSource(src)
     },[src])
 
-    // const randomLoadTime = Math.floor(Math.random() * 5 + 5) * 1000
-    // await new Promise ((resolve) => setTimeout(resolve, randomLoadTime))
-
     return (
         <Image
             className='custom-image-component radius-small image-opacity-fx duration opacity-0'

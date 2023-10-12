@@ -6,7 +6,7 @@ import IndexBGImage from 'public/images/beautiful-trees-lake-rubber-plantation-k
 import IndexNavBar from 'components/Containers/index/IndexNavBar'
 import SearchBox from 'components/Functions/SearchBox'
 import { Suspense } from 'react'
-import IndexLoading from './loading'
+import IndexLoading from 'components/Functions/IndexLoading'
 import IndexCuratedImages from 'components/Containers/index/IndexCuratedImages'
 
 export default function HomePage(){

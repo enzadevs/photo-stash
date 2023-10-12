@@ -11,7 +11,7 @@ export const useResultsStore = create((set,get)=>({
     updateCurrentPage: currentPage => set(() => ({currentPage: currentPage})),
     updatePerPageImages: perPageImages => set(() => ({perPageImages: perPageImages})),
     updateResultsArray: async() => {
-        const response = await fetch(`https://api.pexels.com/v1/search?query=${(get().queryText)}?page=${(get().currentPage)}&per_page=${(get().perPageImages)}`,
+        const response = await fetch(`https://api.pexels.com/v1/search?query=${(get().queryText) + ` `}?page=${(get().currentPage)}&per_page=${(get().perPageImages)}`,
             {
                 headers: {
                     Authorization: API_KEY,

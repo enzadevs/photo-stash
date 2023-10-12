@@ -6,11 +6,7 @@ import Image from 'next/image'
 import ErrorImage from 'public/images/actions/error_pink.jpg'
 
 export default async function CustomImage({src,alt,quality=75}){
-    const [ imgSource,setImgSource ] = useState(src)
-
-    useEffect(()=>{
-        setImgSource(src)
-    },[src])
+    const [ imgSrc,setImgSource ] = useState(src)
 
     return (
         <Image

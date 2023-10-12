@@ -1,25 +1,18 @@
 'use client'
 
 import 'styles/animations/image-transition.css'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import ErrorImage from 'public/images/actions/error_pink.jpg'
 
 export default async function CustomImage({src,alt,quality=75}){
-    const [ imgSource,setImgSource ] = useState(src)
-
-    useEffect(()=>{
-        setImgSource(src)
-    },[src])
-
-    // const randomLoadTime = Math.floor(Math.random() * 5 + 5) * 1000
-    // await new Promise ((resolve) => setTimeout(resolve, randomLoadTime))
+    const [ imgSrc,setImgSource ] = useState(src)
 
     return (
         <Image
             className='custom-image-component radius-small image-opacity-fx duration opacity-0'
             alt={alt}
-            src={imgSource}
+            src={imgSrc}
             width={0}
             height={0}
             quality={quality}

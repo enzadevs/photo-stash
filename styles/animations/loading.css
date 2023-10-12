@@ -18,15 +18,24 @@
 }
 
 .loading-photo-container{
+    padding: 1em;
     height: 700px;
     max-width: 460px;
 }
 
 .index-loading-container{
+    padding: 1em;
     height: 2500px;
 }
 
 .pseudo-image{
+    padding: 1em;
     height: 700px;
     width: 100%;
+}
+
+@media only screen and (max-width: 896px) {
+    .loading-skeleton{
+        margin: 0 1em;
+    }
 }

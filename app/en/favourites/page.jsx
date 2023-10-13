@@ -16,7 +16,8 @@ export const favouritePhotosStore = create (
                 } else {
                     set({favouritePhotos: get().favouritePhotosArray.push(get().photoObject)})
                 }
-            }
+            },
+            clearAllLikedPhotos: () => set({favouritePhotosArray: []})
         }),
         {
             name: 'favourite-photos',
@@ -27,6 +28,7 @@ export const favouritePhotosStore = create (
 
 export default function FavouritesPage() {
     const favouritePhotosArray = favouritePhotosStore(state => state.favouritePhotosArray)
+    const clearAllLikedPhotos = favouritePhotosStore(state => state.clearAllLikedPhotos)
 
     function FavPhotosArray(){
         return(
@@ -53,6 +55,15 @@ export default function FavouritesPage() {
     return (
         <div className='favourites-page margin-auto-1440' suppressHydrationWarning>
             {favouritePhotosArray.length <= 0 ? <NoLikedPhotos/> : <FavPhotosArray/>}
+            <div className='remove-all-photos-conatiner centre'>
+                {favouritePhotosArray.length <= 0 ? 
+                '' 
+                : 
+                <button onClick={clearAllLikedPhotos} className='remove-button radius-small transition-fast'>
+                    Remove all liked photos
+                </button>
+                }
+            </div>
         </div>
     )
 }

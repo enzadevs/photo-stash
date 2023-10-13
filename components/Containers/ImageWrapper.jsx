@@ -32,6 +32,7 @@ export default function ImageWrapper({photoObj,src,alt,photographer,quality,orig
                     </span>
                     <Link 
                         href={`/en/photo/${photostash_url}`}
+                        target='_blank'
                         className='next-link image-icons-wrapper radius-small transition-fast centre'>
                         <BiLinkExternal className='image-icons'/>
                     </Link>

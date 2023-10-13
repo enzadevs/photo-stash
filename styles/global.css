@@ -114,3 +114,22 @@ button{
     height: 100%;
     width: 100%;
 }
+
+.not-found-div{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 80vh;
+    width: 100%;
+}
+
+.not-found-link{
+    border: var(--border-ultra-thin);
+    margin-top: 1em;
+    height: 40px;
+    width: 10em;
+}
+
+.not-found-link:hover{
+    background-color: var(--highlight-color);
+    color: white;
+}

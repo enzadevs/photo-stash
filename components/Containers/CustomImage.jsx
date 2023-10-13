@@ -12,10 +12,11 @@ function ImageComponent({src,alt}){
     useImage({
         srcList: src
     })
+    
     return <Image
             className='custom-image-component radius-small image-opacity-fx duration opacity-0'
             alt={alt}
-            src={src}
+            src={imageSource}
             width={0}
             height={0}
             style={{ width: '100%', height: 'auto' }}

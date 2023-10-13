@@ -1,0 +1,15 @@
+.my-toast{
+    background-color: var(--grey-color);
+    border: none;
+    padding: 0 1em;
+    height: 40px;
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .my-toast{
+        font-size: 14px;
+        padding: 0 8px;
+        height: 36px;
+    }
+}

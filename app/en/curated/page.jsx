@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { useCuratedPhotosStore } from 'global_states/CuratedPhotosStore'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 
-export default async function CuratedPhotos(){
+export default function CuratedPhotos(){
     const curatedPhotosArray = useCuratedPhotosStore(state => state.curatedPhotosArray)
     const maxCuratedPhotosArray = useCuratedPhotosStore(state => state.maxCuratedPhotosArray)
 
@@ -23,8 +23,9 @@ export default async function CuratedPhotos(){
                             src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                             alt={photo.alt}
                             photographer={photo.photographer}
-                            photostash_url={undefined}
-                            // quality={50}
+                            photostash_url={photo.id}
+                            photoObj={photo}
+                            quality={75}
                         />
                     )
                 })}

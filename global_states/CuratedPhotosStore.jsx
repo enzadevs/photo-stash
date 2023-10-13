@@ -15,7 +15,7 @@ export const useCuratedPhotosStore = create ((set,get) => ({
         set({curatedPhotosArray: data.photos})
     },
     maxCuratedPhotosArray: async() => {
-        const response = await fetch(`https://api.pexels.com/v1/curated?page=10&per_page=85`,
+        const response = await fetch(`https://api.pexels.com/v1/curated?page=1&per_page=48`,
             {
                 headers: {
                     Authorization: API_KEY,

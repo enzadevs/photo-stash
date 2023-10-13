@@ -1,11 +1,16 @@
 'use client'
 
 import { v4 as uuidv4 } from 'uuid'
+import { useEffect } from 'react'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 import { useResultsStore } from 'global_states/QueryResults'
 
 export default function SearchResults(){
     const resultsArray = useResultsStore((state) => state.resultsArray)
+
+    useEffect(()=>{
+        console.log('Mounted')
+    },[])
 
     function ResultsWrapper(){
         return(

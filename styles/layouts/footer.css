@@ -26,6 +26,10 @@ footer{
     gap: 1em;
 }
 
+.footer-links{
+    width: fit-content;
+}
+
 .footer-links:hover{
     color: var(--highlight-color);
 }

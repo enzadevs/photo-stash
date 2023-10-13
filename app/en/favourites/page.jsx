@@ -47,7 +47,7 @@ export default function FavouritesPage() {
     }
 
     function NoLikedPhotos(){
-        return <p className='centre'>Please like some photos to see them here</p>
+        return <p className='no-liked-photos centre'>Please like some photos to see them here</p>
     }
 
     return (

@@ -58,6 +58,11 @@
     border: none;
 }
 
+.no-liked-photos{
+    border-bottom: var(--border-ultra-thin);
+    min-height: 250px;
+}
+
 .terms-and-policies-page{
     display: flex;
     flex-flow: column nowrap;

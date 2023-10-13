@@ -33,16 +33,10 @@ export default async function PhotoPage({params}){
 
     return (
         <div className='photo-page-container margin-auto-1440 centre'>
-            <span className='photo-wrapper'>
-                <CustomImage
-                    src={photo.src.large2x}
-                    alt={photo.alt}
-                />
-            </span>
-            <span className='photo-functions-container'>
-                buttons!
-            </span>
+            <img
+                src={photo.src.large}
+                alt={photo.alt}
+            />
         </div>
-        
     )
 }

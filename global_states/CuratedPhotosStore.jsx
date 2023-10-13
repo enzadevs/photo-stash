@@ -9,7 +9,8 @@ export const useCuratedPhotosStore = create ((set,get) => ({
                 headers: {
                     Authorization: API_KEY,
                 },
-            }
+            },
+            { next: { revalidate: 21600 } }
         )
         const data = await response.json()
         set({curatedPhotosArray: data.photos})
@@ -20,7 +21,8 @@ export const useCuratedPhotosStore = create ((set,get) => ({
                 headers: {
                     Authorization: API_KEY,
                 },
-            }
+            },
+            { next: { revalidate: 21600 } }
         )
         const data = await response.json()
         set({curatedPhotosArray: data.photos})

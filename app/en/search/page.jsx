@@ -34,7 +34,7 @@ export default function SearchResults(){
     
     function EmptySearch(){
         return(
-            <p className='centre'>Please type some words in search box.</p>
+            <p className='empty-search-text centre'>Please type some words in search box.</p>
         )
     }
 

@@ -58,8 +58,7 @@
     border: none;
 }
 
-.no-liked-photos{
-    border-bottom: var(--border-ultra-thin);
+.no-liked-photos,empty-search-text{
     min-height: 250px;
 }
 

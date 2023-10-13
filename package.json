@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "7.23.2",
     "encoding": "^0.1.13",
     "js-file-downloader": "^1.1.25",
     "next": "^13.4.12",
@@ -22,6 +23,7 @@
     "react-icons": "^4.10.1",
     "react-image": "^4.1.0",
     "react-simple-toasts": "^5.10.0",
+    "regenerator-runtime": "0.14.0",
     "use-sync-external-store": "1.2.0",
     "uuid": "^9.0.0",
     "zustand": "^4.4.3"

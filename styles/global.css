@@ -3,11 +3,7 @@
     --border-thin: 1px solid rgba(0,0,0, 0.5);
     --border-ultra-thin: 1px solid rgba(0,0,0, 0.1);
     --border-radius-small: 5px;
-    --border-radius-medium: 14px;
-    --border-radius-large: 28px;
     --border-radius-circle: 50%;
-    --box-shadow-full: rgba(91, 109, 104, 0.247) 0px 0px 10px 0px;
-    --box-shadow-bottom: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 *{
@@ -30,10 +26,6 @@
     border: 2px solid #ffffff;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     --main-text-color: #000000;
     --primary-bg-color: #fffffe;
@@ -43,9 +35,6 @@ body{
     --lightest-violet-color: #DCCFEC;
     --ultra-light-violet-color: #DDC4DD;
     --grey-color: #f2f4f6;
-    --red-color: rgb(235,81,96);
-    --tiffany-mint-color: rgb(149,217,195);
-    --yellow-color: rgb(255,177,0);
     background-color: var(--primary-bg-color);
     display: flex;
     flex-flow: column nowrap;
@@ -86,10 +75,6 @@ button{
     text-decoration: none;
 }
 
-.transition{
-    transition: all ease-in .3s;
-}
-
 .transition-fast{
     transition: all ease-in .1s;
 }
@@ -110,11 +95,6 @@ button{
     border-radius: var(--border-radius-small);
 }
 
-.hw100{
-    height: 100%;
-    width: 100%;
-}
-
 .not-found-div{
     display: flex;
     flex-flow: column nowrap;
@@ -125,7 +105,7 @@ button{
 .not-found-link{
     border: var(--border-ultra-thin);
     margin-top: 1em;
-    height: 40px;
+    height: 36px;
     width: 10em;
 }
 

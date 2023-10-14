@@ -8,7 +8,7 @@ import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi
 import ThrowToast from 'components/Functions/Toaster'
 import CustomImage from './CustomImage'
 
-export default function ImageWrapper({photoObj,src,alt,photographer,quality,originalImg,photostash_url}){
+export default function ImageWrapper({photoObj,src,alt,photographer,originalImg,photostash_url}){
     const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)
     const addPhotoToLiked = favouritePhotosStore(state => state.addPhotoToLiked)
     
@@ -17,7 +17,6 @@ export default function ImageWrapper({photoObj,src,alt,photographer,quality,orig
             <CustomImage
                 src={src}
                 alt={alt}
-                quality={quality}
             />
             <span className='image-buttons hw100 transition-fast radius-small'>
                 <div className='top-right-buttons'>

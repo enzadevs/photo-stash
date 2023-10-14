@@ -19,13 +19,12 @@ export default async function IndexCuratedImages(){
                 return(
                     <ImageWrapper
                         key={uuidv4()}
-                        photostash_url={photo.id}
-                        src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                         photoObj={photo}
+                        photostash_url={photo.id}
                         originalImg={photo.src.original}
-                        alt={photo.alt}
+                        src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                         photographer={photo.photographer}
-                        quality={75}
+                        alt={photo.alt}
                     />
                 )
             })}

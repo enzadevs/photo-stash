@@ -17,11 +17,11 @@
     }
 }
 
-.image-loading-div{
-    height: 250px;
-    max-width: 460px;
+.index-loading-container{
+    height: 700px;
 }
 
-.index-loading-container{
-    height: 2500px;
+.image-loading-div{
+    height: 250px;
+    width: 460px;
 }

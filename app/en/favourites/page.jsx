@@ -55,7 +55,7 @@ export default function FavouritesPage() {
     return (
         <div className='favourites-page margin-auto-1440' suppressHydrationWarning>
             {favouritePhotosArray.length <= 0 ? <NoLikedPhotos/> : <FavPhotosArray/>}
-            <div className='remove-all-photos-conatiner centre'>
+            <div className='remove-all-photos-container centre'>
                 {favouritePhotosArray.length <= 0 ? 
                 '' 
                 : 

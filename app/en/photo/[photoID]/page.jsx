@@ -1,6 +1,8 @@
 const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
-import CustomImage from 'components/Containers/CustomImage'
+import styles from './photo.module.css'
+import Image from 'next/image'
+import PhotoBottomFunctions from 'components/Containers/en/PhotoBottomFunctions'
 
 export async function generateMetadata({params}) {
     let id = params.photoID
@@ -32,10 +34,24 @@ export default async function PhotoPage({params}){
         .then ((res) => res.json())
 
     return (
-        <div className='photo-page-container margin-auto-1440 centre'>
-            <img
-                src={photo.src.large}
-                alt={photo.alt}
+        <div className={styles.photo_page_container}>
+            <h3 className={styles.photo_header}>{photo.alt}</h3>
+            <div className={styles.photo_container}>
+                <Image
+                    src={photo.src.large2x}
+                    alt={photo.alt}
+                    className={styles.photo_large}
+                    width={0}
+                    height={0}
+                    style={{ width: 'auto', height: '100%' }}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                ></Image>
+            </div>
+            <PhotoBottomFunctions 
+                styles={styles}
+                photographer={photo.photographer}
+                photographer_url={photo.photographer_url}
+                pexels_url={photo.url}
             />
         </div>
     )

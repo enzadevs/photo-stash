@@ -23,10 +23,10 @@ export default function Footer(){
                         <Link href='/en/about' className='next-link footer-links transition-fast'>
                             About
                         </Link>
-                        <Link href='/' className='next-link footer-links transition-fast'>
+                        <Link href='/' className='next-link footer-links transition-fast' target='_blank'>
                             Portfolio
                         </Link>
-                        <Link href='https://github.com/enzadevs' className='next-link footer-links transition-fast'>
+                        <Link href='https://github.com/enzadevs' className='next-link footer-links transition-fast' target='_blank'>
                             Github
                         </Link>
                     </span>

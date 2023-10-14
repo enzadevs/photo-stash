@@ -2,12 +2,11 @@
 
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { favouritePhotosStore } from 'app/en/favourites/page'
 import JsFileDownloader from 'js-file-downloader'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 import ThrowToast from 'components/Functions/Toaster'
-const CustomImage = dynamic(() => import('./CustomImage'))
+import CustomImage from './CustomImage'
 
 export default function ImageWrapper({photoObj,src,alt,photographer,quality,originalImg,photostash_url}){
     const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)
@@ -45,7 +44,7 @@ export default function ImageWrapper({photoObj,src,alt,photographer,quality,orig
                     <span
                         onClick={()=>{
                             new JsFileDownloader({
-                                url: originalImg + `?height=1440&width=2048`,
+                                url: originalImg + `?height=2650&width=2650`,
                                 nameCallback: function() {
                                     return alt + '.jpg'
                                 },

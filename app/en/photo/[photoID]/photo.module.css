@@ -1,0 +1,109 @@
+.photo_page_container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: clamp(500px, 75vh, auto);
+    max-width: 1440px;
+}
+
+.photo_header{
+    border-bottom: var(--border-ultra-thin);
+    padding: 0.5em;
+}
+
+.photo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: clamp(500px, 70vh, 700px);
+}
+
+.photo_large{
+    padding: 1em 0;
+    position: relative;
+    object-fit: cover;
+    min-height: 300px;
+}
+
+.bottom_functions_container{
+    background-color: var(--grey-color);
+    border-radius: var(--border-radius-small);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto 0 1em 0;
+    height: 4em;
+}
+
+.photographer_name_container, .download_btn_container, .pexels_url_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 33%;
+}
+
+.photographer_link{
+    font-weight: 700;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.download_button{
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: var(--border-radius-small);
+    color: white;
+    height: 40px;
+    width: 12em;
+}
+
+.pexels_link{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.photographer_link:hover, .pexels_link:hover{
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
+@media only screen and (max-width: 896px) {
+    .photo_container{
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .photo_page_container{
+        height: auto;
+    }
+
+    .bottom_functions_container{
+        flex-flow: column nowrap;
+        gap: 8px;
+        padding: 8px 0;
+        height: auto;
+    }
+
+    .photo_container{
+        height: auto;
+    }
+
+    .photo_large{
+        max-width: 500px;
+    }
+
+    .photographer_name_container, .pexels_url_container{
+        border-bottom: var(--border-ultra-thin);
+        padding: 4px 2.5em;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .photo_large{
+        max-width: 315px;
+    }
+}

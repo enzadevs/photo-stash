@@ -1,0 +1,21 @@
+.curated-photos-wrapper{
+    border-bottom: var(--border-ultra-thin);
+    columns: auto 3;
+    gap: 14px;
+    padding: 1em; 
+}
+
+@media only screen and (max-width: 896px) {
+    .curated-photos-wrapper{
+        columns: auto 2;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .curated-photos-wrapper{
+        columns: auto 1;
+        gap: 5px;
+    }
+}

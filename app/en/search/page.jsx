@@ -20,11 +20,11 @@ export default function SearchResults(){
                         <ImageWrapper
                             key={uuidv4()}
                             photoObj={photo}
-                            src={photo.src.large2x + `?auto=compress&height=800&width=500`}
-                            alt={photo.alt}
-                            photographer={photo.photographer}
+                            photostash_url={photo.id}
                             originalImg={photo.src.original}
-                            quality={75}
+                            src={photo.src.large2x + `?auto=compress&height=800&width=500`}
+                            photographer={photo.photographer}
+                            alt={photo.alt}
                         />
                     )
                 })}

@@ -1,5 +1,6 @@
 'use client'
 
+import './curated.css'
 import { v4 as uuidv4 } from 'uuid'
 import { useEffect } from 'react'
 import { useCuratedPhotosStore } from 'global_states/CuratedPhotosStore'
@@ -14,7 +15,7 @@ export default function CuratedPhotos(){
     },[])
 
     return (
-        <div className='curated-photos-page-container margin-auto-1440'>
+        <div className='margin-auto-1440'>
             <div className='curated-photos-wrapper'>
                 {curatedPhotosArray?.map(photo=>{
                     return(
@@ -25,7 +26,6 @@ export default function CuratedPhotos(){
                             photographer={photo.photographer}
                             photostash_url={photo.id}
                             photoObj={photo}
-                            quality={75}
                         />
                     )
                 })}

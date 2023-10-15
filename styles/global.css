@@ -34,6 +34,7 @@ body{
     --highlight-darker-color: #4F517D;
     --lightest-violet-color: #DCCFEC;
     --ultra-light-violet-color: #DDC4DD;
+    --red-color: #EB5160;
     --grey-color: #f2f4f6;
     background-color: var(--primary-bg-color);
     display: flex;

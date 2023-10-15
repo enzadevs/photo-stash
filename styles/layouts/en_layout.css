@@ -31,28 +31,3 @@
 .nav-buttons:hover, .load-more-btn:hover{
     background-color: var(--highlight-color);
 }
-
-.terms-and-policies-page{
-    display: flex;
-    flex-flow: column nowrap;
-    min-height: 750px;
-}
-
-.term-links{
-    color: var(--highlight-color);
-}
-
-.terms-header{
-    margin: 1em;
-}
-
-.terms-container{
-    background-color: var(--grey-color);
-    padding: 1em;
-    width: 300px;
-}
-
-li{
-    list-style: decimal;
-    margin: 0.5em;
-}

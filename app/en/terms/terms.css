@@ -1,0 +1,26 @@
+.terms-and-policies-page{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 70vh;
+}
+
+.term-links{
+    color: var(--highlight-color);
+}
+
+.terms-header{
+    background-color: var(--lightest-violet-color);
+    margin: 1em;
+    padding: 8px;
+}
+
+.terms-container{
+    background-color: var(--grey-color);
+    padding: 1em;
+    width: 300px;
+}
+
+li{
+    list-style: decimal;
+    margin: 8px 0;
+}

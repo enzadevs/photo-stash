@@ -1,6 +1,6 @@
 .my-toast{
-    background-color: var(--grey-color);
-    border: var(--border-thin);
+    background-color: var(--highlight-color);
+    color: white;
     padding: 0 1em;
     height: 40px;
     width: auto;

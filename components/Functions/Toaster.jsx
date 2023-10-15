@@ -13,7 +13,7 @@ export default function ThrowToast(){
         taskPromise.then(()=>{
             taskToast.update({
             message: 'Finished download',
-            duration: 1750
+            duration: 1000
         })
     })
 }

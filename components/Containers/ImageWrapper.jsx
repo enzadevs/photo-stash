@@ -3,10 +3,10 @@
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
 import { FavouritePhotosStore } from 'global_states/FavouritePhotosStore'
-import JsFileDownloader from 'js-file-downloader'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 import ThrowToast from 'components/Functions/Toaster'
 import CustomImage from './CustomImage'
+import StartDownload from 'components/Functions/DownloadPhoto'
 
 export default function ImageWrapper({photoObj,src,alt,photographer,originalImg,photostash_url}){
     const updatePhotoObject = FavouritePhotosStore(state => state.updatePhotoObject)
@@ -42,14 +42,12 @@ export default function ImageWrapper({photoObj,src,alt,photographer,originalImg,
                     <p className='photographer-name'>{photographer}</p>
                     <span
                         onClick={()=>{
-                            new JsFileDownloader({
-                                url: originalImg + `?height=2650&width=2650`,
-                                nameCallback: function() {
-                                    return alt + '.jpg'
-                                },
-                                timeout: 75000,
-                                forceDesktopMode: true
-                            })
+                            StartDownload(
+                                {
+                                    imageSource: originalImg,
+                                    imageAlt: photoObj.url
+                                }
+                            )
                             ThrowToast()
                         }}
                         className='next-link download-icon-wrapper radius-small transition-fast centre'

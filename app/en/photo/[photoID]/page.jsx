@@ -15,14 +15,13 @@ export async function generateMetadata({params}) {
         .then ((res) => res.json())
 
     return {
-        title: photo.alt,
-        description: 'Photo of: ' + photo.alt + '.'
+        title: 'Photo by : ' + photo.photographer,
+        description: 'Photo of: ' + photo.alt + 'at Photo Stash.'
     }
 }
 
 export default async function PhotoPage({params}){
     let id = params.photoID
-    
     const photo = await fetch(`https://api.pexels.com/v1/photos/${id}`,
         {
             headers: {
@@ -41,7 +40,7 @@ export default async function PhotoPage({params}){
                     className={styles.photo_large}
                     width={0}
                     height={0}
-                    style={{ width: 'auto', height: '100%' }}
+                    style={{ width: '100%', height: 'auto' }}
                     sizes='100vw'
                 ></Image>
             </div>
@@ -50,6 +49,8 @@ export default async function PhotoPage({params}){
                 photographer={photo.photographer}
                 photographer_url={photo.photographer_url}
                 pexels_url={photo.url}
+                originalImg={photo.src.original}
+                url={photo.url}
             />
         </div>
     )

@@ -23,7 +23,7 @@ export default function SearchBox({className}){
                 onChange={e => updateQueryText(e.currentTarget.value)}    
                 onKeyUp={(e) =>{
                     if(e.key === 'Enter' && queryText !== ''){
-                        router.push('/en/search')
+                        router.push('/core/search')
                         updateResultsArray()
                         clearInputArea()
                     } else return
@@ -35,7 +35,7 @@ export default function SearchBox({className}){
                     if( queryText === '') {
                         return
                     } else {
-                        router.push('/en/search')
+                        router.push('/core/search')
                         updateResultsArray()
                         clearInputArea()
                     }

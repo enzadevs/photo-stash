@@ -2,7 +2,7 @@ const API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY
 
 import styles from './photo.module.css'
 import Image from 'next/image'
-import PhotoBottomFunctions from 'components/Containers/en/PhotoBottomFunctions'
+import PhotoBottomFunctions from 'components/Containers/core/PhotoBottomFunctions'
 
 export async function generateMetadata({params}) {
     let id = params.photoID

@@ -22,8 +22,8 @@ export default async function IndexCuratedImages(){
                         photoObj={photo}
                         photostash_url={photo.id}
                         originalImg={photo.src.original}
-                        src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                         photographer={photo.photographer}
+                        src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                         alt={photo.alt}
                     />
                 )

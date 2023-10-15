@@ -43,7 +43,7 @@ export default function GlobalNavBar(){
                     className='global-searchbox'
                 />
             </span>
-            <Link href='/en/favourites' className='global-heart-wrapper next-link centre radius-small transition'>
+            <Link href='/en/favourites' className='global-heart-wrapper next-link centre radius-small transition-fast'>
                 <BiSolidHeart className='heart-icon'/>
             </Link>
         </nav>

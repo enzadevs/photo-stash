@@ -6,19 +6,17 @@ import PhotoBottomFunctions from 'components/Containers/en/PhotoBottomFunctions'
 
 export async function generateMetadata({params}) {
     let id = params.photoID
-
     const photo = await fetch(`https://api.pexels.com/v1/photos/${id}`,
         {
             headers: {
-                Authorization: API_KEY,
-            },
+                Authorization: API_KEY
+            }
         })
         .then ((res) => res.json())
 
     return {
-        title: 'Photo of: ' + photo.alt,
-        description: 'Photo of: ' + photo.alt + '.',
-        params: photo.id
+        title: photo.alt,
+        description: 'Photo of: ' + photo.alt + '.'
     }
 }
 
@@ -28,8 +26,8 @@ export default async function PhotoPage({params}){
     const photo = await fetch(`https://api.pexels.com/v1/photos/${id}`,
         {
             headers: {
-                Authorization: API_KEY,
-            },
+                Authorization: API_KEY
+            }
         })
         .then ((res) => res.json())
 
@@ -44,7 +42,7 @@ export default async function PhotoPage({params}){
                     width={0}
                     height={0}
                     style={{ width: 'auto', height: '100%' }}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                    sizes='100vw'
                 ></Image>
             </div>
             <PhotoBottomFunctions 

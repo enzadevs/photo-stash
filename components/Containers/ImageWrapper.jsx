@@ -2,15 +2,15 @@
 
 import 'styles/components/image-wrapper.css'
 import Link from 'next/link'
-import { favouritePhotosStore } from 'app/en/favourites/page'
+import { FavouritePhotosStore } from 'global_states/FavouritePhotosStore'
 import JsFileDownloader from 'js-file-downloader'
 import {BiSolidHeart,BiLinkExternal,BiSolidUser,BiDownload} from 'react-icons/bi'
 import ThrowToast from 'components/Functions/Toaster'
 import CustomImage from './CustomImage'
 
 export default function ImageWrapper({photoObj,src,alt,photographer,originalImg,photostash_url}){
-    const updatePhotoObject = favouritePhotosStore(state => state.updatePhotoObject)
-    const addPhotoToLiked = favouritePhotosStore(state => state.addPhotoToLiked)
+    const updatePhotoObject = FavouritePhotosStore(state => state.updatePhotoObject)
+    const addPhotoToLiked = FavouritePhotosStore(state => state.addPhotoToLiked)
     
     return (
         <div className='photo-wrapper radius-small' >

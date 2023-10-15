@@ -1,16 +1,12 @@
 'use client'
 
+import './search.css'
 import { v4 as uuidv4 } from 'uuid'
-import { useEffect } from 'react'
 import ImageWrapper from 'components/Containers/ImageWrapper'
 import { useResultsStore } from 'global_states/QueryResults'
 
 export default function SearchResults(){
     const resultsArray = useResultsStore((state) => state.resultsArray)
-
-    useEffect(()=>{
-        console.log('Mounted')
-    },[])
 
     function ResultsWrapper(){
         return(
@@ -22,8 +18,8 @@ export default function SearchResults(){
                             photoObj={photo}
                             photostash_url={photo.id}
                             originalImg={photo.src.original}
-                            src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                             photographer={photo.photographer}
+                            src={photo.src.large2x + `?auto=compress&height=800&width=500`}
                             alt={photo.alt}
                         />
                     )
@@ -34,12 +30,12 @@ export default function SearchResults(){
     
     function EmptySearch(){
         return(
-            <p className='empty-search-text centre'>Please type some words in search box.</p>
+            <p className='empty-search-text'>Please type some words in search box.</p>
         )
     }
 
     return (
-        <div className='search-results-container'>
+        <div className='margin-auto-1440'>
             {resultsArray.length <= 0 ? <EmptySearch/> : <ResultsWrapper/>}
         </div>
     )

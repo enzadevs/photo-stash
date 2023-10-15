@@ -11,22 +11,6 @@
     z-index: 2;
 }
 
-.search-results-container{
-    margin: 1em auto;
-    display: flex;
-    flex-flow: column nowrap;
-    min-height: 500px;
-    max-width: 1440px;
-}
-
-.results-wrapper{
-    border-bottom: var(--border-ultra-thin);
-    columns: auto 3;
-    gap: 0.75em;
-    padding: 0 1em;
-    min-height: 700px;
-}
-
 .search-page-bottom-nav-buttons{
     display: flex;
     justify-content: space-between;
@@ -46,10 +30,6 @@
 
 .nav-buttons:hover, .load-more-btn:hover{
     background-color: var(--highlight-color);
-}
-
-.empty-search-text{
-    min-height: 250px;
 }
 
 .terms-and-policies-page{
@@ -75,23 +55,4 @@
 li{
     list-style: decimal;
     margin: 0.5em;
-}
-
-@media only screen and (max-width: 896px) {
-    .results-wrapper{
-        columns: auto 2;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .terms-and-policies-page{
-        min-height: 500px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .results-wrapper{
-        columns: auto 1;
-        gap: 5px;
-    }
 }

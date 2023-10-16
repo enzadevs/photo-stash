@@ -1,7 +1,6 @@
 'use client'
 
 import 'styles/layouts/navbar.css'
-
 import useScreenSize from 'components/Navigation/useScreenSize'
 import Link from 'next/link'
 import SearchBox from 'components/Functions/SearchBox'

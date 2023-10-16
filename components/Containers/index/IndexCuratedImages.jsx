@@ -9,13 +9,13 @@ export default async function IndexCuratedImages(){
     const curatedPhotosArray = useCuratedPhotosStore(state => state.curatedPhotosArray)
     const minCuratedPhotos = useCuratedPhotosStore(state => state.minCuratedPhotos)
 
-    useEffect( async () =>{
+    useEffect(() =>{
         try{
-            await minCuratedPhotos()
+            minCuratedPhotos()
         } catch(error){
             throw new Error(console.log('Failed to fetch images.'))
         }
-    }, [])
+    },[])
 
     return (
         <div className='columns-container margin-auto-1440'>

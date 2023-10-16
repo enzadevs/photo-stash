@@ -11,7 +11,7 @@ export default function SearchResults(){
     function ResultsWrapper(){
         return(
             <div className='results-wrapper'>
-                {resultsArray.map(photo=>{
+                {resultsArray?.map(photo=>{
                     return(
                         <ImageWrapper
                             key={uuidv4()}

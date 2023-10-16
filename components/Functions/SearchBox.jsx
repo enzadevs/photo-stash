@@ -15,7 +15,7 @@ export default function SearchBox({className}){
     return (
         <span className={className}>
             <input 
-                className='search-input-field transition-fast radius-small hw100'
+                className='search-input-field hw100 transition-fast radius-small'
                 type='text'
                 placeholder='Type here...'
                 maxLength={48}
@@ -30,7 +30,7 @@ export default function SearchBox({className}){
                 }}
             ></input>
             <span
-                className='search-icon-wrapper radius-small centre transition-fast'
+                className='search-icon-wrapper centre transition-fast radius-small '
                 onClick={()=>{
                     if( queryText === '') {
                         return

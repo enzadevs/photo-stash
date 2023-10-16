@@ -1,7 +1,7 @@
 .search-input-field{
     background-color: var(--grey-color);
     border: var(--border-ultra-thin);
-    padding: .5em 2em .5em 0.75em;
+    padding: 8px 36px 8px 12px;
 }
 
 .search-icon-wrapper{
@@ -10,11 +10,11 @@
     top: 0px;
     right: 0px;
     height: 100%;
-    width: 2em;
+    width: 36px;
 }
 
 .search-input-field:focus{
-    border: var(--border-medium);
+    border: 1px solid black;
     border-color: var(--highlight-color);
 }
 

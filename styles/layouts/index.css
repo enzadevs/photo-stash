@@ -42,7 +42,7 @@
     columns: auto 3;
     gap: 0.75em;
     padding: 0 1em 1em 1em;
-    min-height: 250px;
+    min-height: 500px;
 }
 
 .curated-link-container{

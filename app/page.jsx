@@ -33,7 +33,7 @@ export default function HomePage(){
                     <IndexCuratedImages/>
                 </Suspense>
                 <span className='curated-link-container centre'>
-                    <Link href='/en/curated' className='curated-button centre transition-fast radius-small'>
+                    <Link href='/core/curated' className='curated-button centre transition-fast radius-small'>
                         More curated photos
                     </Link>
                 </span>

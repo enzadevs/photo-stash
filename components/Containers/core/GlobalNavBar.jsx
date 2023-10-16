@@ -1,10 +1,11 @@
 'use client'
 
 import 'styles/layouts/navbar.css'
-import useScreenSize from 'components/Navigation/useScreenSize'
+import './global-nav-bar.css'
 import Link from 'next/link'
-import SearchBox from 'components/Functions/SearchBox'
 import {BiSolidHeart} from 'react-icons/bi'
+import SearchBox from 'components/Functions/SearchBox'
+import useScreenSize from 'components/Navigation/useScreenSize'
 
 function DefaultLogo(){
     return(
@@ -26,23 +27,13 @@ function ShortLogo(){
 export default function GlobalNavBar(){
     const {width} = useScreenSize()
 
-    function Logo(){
-        if (width < 770) {
-            return <ShortLogo/>
-        } else {
-            return <DefaultLogo/>
-        }
-    }
-
     return (
         <nav id='global-navbar' className='margin-auto-1440'>
-            <Logo/>
+            {width <= 770 ? <ShortLogo/> : <DefaultLogo/>}
             <span className='global-searchbox-wrapper centre'>
-                <SearchBox
-                    className='global-searchbox'
-                />
+                <SearchBox className='global-searchbox'/>
             </span>
-            <Link href='/en/favourites' className='global-heart-wrapper next-link centre radius-small transition-fast'>
+            <Link href='/core/favourites' className='global-heart-wrapper next-link centre radius-small transition-fast'>
                 <BiSolidHeart className='heart-icon'/>
             </Link>
         </nav>

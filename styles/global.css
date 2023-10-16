@@ -1,5 +1,4 @@
 :root{
-    --border-medium: 1px solid rgba(0,0,0, 1);
     --border-thin: 1px solid rgba(0,0,0, 0.5);
     --border-ultra-thin: 1px solid rgba(0,0,0, 0.1);
     --border-radius-small: 5px;
@@ -111,6 +110,33 @@ button{
 }
 
 .not-found-link:hover{
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.error-page{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 80vh;
+    width: 100%;
+}
+
+.error-header{
+    border: var(--border-ultra-thin);
+    color: var(--red-color);
+    padding: 8px 1em;
+}
+
+.error-button{
+    border: none;
+    height: 36px;
+    width: 10em;
+}
+
+.error-button:hover{
     background-color: var(--highlight-color);
     color: white;
 }

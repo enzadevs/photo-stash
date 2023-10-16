@@ -10,9 +10,13 @@ export default function CuratedPhotos(){
     const curatedPhotosArray = useCuratedPhotosStore(state => state.curatedPhotosArray)
     const maxCuratedPhotosArray = useCuratedPhotosStore(state => state.maxCuratedPhotosArray)
 
-    useEffect(()=>{
-        maxCuratedPhotosArray()
-    },[])
+    useEffect( async () =>{
+        try{
+            await maxCuratedPhotosArray()
+        } catch(error){
+            throw new Error(console.log('Failed to fetch images.'))
+        }
+    }, [])
 
     return (
         <div className='margin-auto-1440'>

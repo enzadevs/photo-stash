@@ -9,6 +9,7 @@ export const useResultsStore = create((set,get)=>({
     updateResultsArray: async() => {
         const response = await fetch(`https://api.pexels.com/v1/search?query=${(get().queryText) + ` `}?page=1&per_page=48`,
             {
+                cache: 'no-store',
                 headers: {
                     Authorization: API_KEY,
                 },

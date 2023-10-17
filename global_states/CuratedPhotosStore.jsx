@@ -6,6 +6,7 @@ export const useCuratedPhotosStore = create ((set,get) => ({
     minCuratedPhotos: async() => {
         const response = await fetch(`https://api.pexels.com/v1/curated?page=7&per_page=24`,
             {
+                cache: 'no-store',
                 headers: {
                     Authorization: API_KEY,
                 },
@@ -18,6 +19,7 @@ export const useCuratedPhotosStore = create ((set,get) => ({
     maxCuratedPhotosArray: async() => {
         const response = await fetch(`https://api.pexels.com/v1/curated?page=1&per_page=48`,
             {
+                cache: 'no-store',
                 headers: {
                     Authorization: API_KEY,
                 },

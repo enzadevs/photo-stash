@@ -23,8 +23,10 @@ export async function generateMetadata({params}) {
 
 export default async function PhotoPage({params}){
     let id = params.photoID
+    
     const photo = await fetch(`https://api.pexels.com/v1/photos/${id}`,
         {
+            cache: 'no-store',
             headers: {
                 Authorization: API_KEY
             }

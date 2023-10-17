@@ -10,7 +10,7 @@ import useScreenSize from 'components/Navigation/useScreenSize'
 function DefaultLogo(){
     return(
         <Link className='global-header-link next-link transition-fast radius-small centre' href='/'>
-            <h1>Photo</h1><h1 className='stash-txt'>Stash</h1>
+            <h1 className='global-photo-text'>Photo</h1><h1 className='stash-txt'>Stash</h1>
         </Link>
     )
 }

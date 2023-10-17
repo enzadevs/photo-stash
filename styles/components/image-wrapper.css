@@ -13,7 +13,7 @@
 .image-buttons{
     position: absolute;
     top: 0;
-    opacity: 1;
+    opacity: 0;
 }
 
 .image-buttons:hover{

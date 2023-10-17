@@ -31,7 +31,7 @@ export default async function IndexCuratedImages() {
             photostash_url={photo.id}
             originalImg={photo.src.original}
             photographer={photo.photographer}
-            src={photo.src.large + `?auto=compress&height=800&width=500`}
+            src={photo.src.large + `&height=800&width=500`}
             alt={photo.alt}
           />
         );

@@ -20,9 +20,6 @@ export default function Footer(){
                         Developer Info
                     </h4>
                     <span className='footer-links-wrapper'>
-                        <Link href='/core/about' className='next-link footer-links transition-fast'>
-                            About
-                        </Link>
                         <Link href='/' className='next-link footer-links transition-fast' target='_blank'>
                             Portfolio
                         </Link>

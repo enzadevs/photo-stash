@@ -20,10 +20,10 @@ export default function Footer(){
                         Developer Info
                     </h4>
                     <span className='footer-links-wrapper'>
-                        <Link href='/' className='next-link footer-links transition-fast' target='_blank'>
+                        <Link href='https://enzadevs.vercel.app/' className='next-link footer-links transition-fast' target='_blank'>
                             Portfolio
                         </Link>
-                        <Link href='https://github.com/enzadevs' className='next-link footer-links transition-fast' target='_blank'>
+                        <Link href='https://github.com/enzadevs/photo-stash' className='next-link footer-links transition-fast' target='_blank'>
                             Github
                         </Link>
                     </span>
